@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8b50fa69486cdb30816b2a02307940d8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8b50fa69486cdb30816b2a02307940d8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8b50fa69486cdb30816b2a02307940d8 = L.map(
+                "map_8b50fa69486cdb30816b2a02307940d8",
+                {
+                    center: [41.9028, 12.4964],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e9e4136941ff6350eca51a590e93a9e4 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var marker_883bc8f8055276a395e10a0bab03b88c = L.marker(
+                [41.91517990517069, 12.45817763445216],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_182b440b341444299d55c7d35f27be7f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_883bc8f8055276a395e10a0bab03b88c.setIcon(icon_182b440b341444299d55c7d35f27be7f);
+        
+    
+        var popup_e39d497d647825f0c507675ae07e808e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7eacbd252f66d092fbd156fbf84066cf = $(`<div id="html_7eacbd252f66d092fbd156fbf84066cf" style="width: 100.0%; height: 100.0%;"><b>IMRE (EX EMO)</b><br><i>ROMA 1</i><br>Indirizzo: Viale Angelico, 28 - 00136 Roma<br>Telefono: 06-68354412</div>`)[0];
+                popup_e39d497d647825f0c507675ae07e808e.setContent(html_7eacbd252f66d092fbd156fbf84066cf);
+            
+        
+
+        marker_883bc8f8055276a395e10a0bab03b88c.bindPopup(popup_e39d497d647825f0c507675ae07e808e)
+        ;
+
+        
+    
+    
+            var marker_6812b3d4c0b65461cc59da2c2ae4c180 = L.marker(
+                [41.99615346265864, 12.481343816978775],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_e0cb3e58560e0927f6d83496446d1ab9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6812b3d4c0b65461cc59da2c2ae4c180.setIcon(icon_e0cb3e58560e0927f6d83496446d1ab9);
+        
+    
+        var popup_a3887766e971250aebff766dcae4a493 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7442fa6b7a4564aa87da91c7f497e1ec = $(`<div id="html_7442fa6b7a4564aa87da91c7f497e1ec" style="width: 100.0%; height: 100.0%;"><b>Clauzetto</b><br><i>ROMA 1</i><br>Indirizzo: Via San Daniele del Friuli, 8 - 00188 Roma<br>Telefono: 06-68354761</div>`)[0];
+                popup_a3887766e971250aebff766dcae4a493.setContent(html_7442fa6b7a4564aa87da91c7f497e1ec);
+            
+        
+
+        marker_6812b3d4c0b65461cc59da2c2ae4c180.bindPopup(popup_a3887766e971250aebff766dcae4a493)
+        ;
+
+        
+    
+    
+            var marker_d62b6e0b1bde6df90d0c87b7cc94c60f = L.marker(
+                [41.958121409834604, 12.454397110571826],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_cf554d70e5c9540ea69516f6b12ae6be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d62b6e0b1bde6df90d0c87b7cc94c60f.setIcon(icon_cf554d70e5c9540ea69516f6b12ae6be);
+        
+    
+        var popup_e87c393c14209281336df9bed1f43115 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5fbc9efafe196a905b73acde6ec0707a = $(`<div id="html_5fbc9efafe196a905b73acde6ec0707a" style="width: 100.0%; height: 100.0%;"><b>Cassia</b><br><i>ROMA 1</i><br>Indirizzo: Via Cassia, 472 - 00189 Roma<br>Telefono: 06-68354616</div>`)[0];
+                popup_e87c393c14209281336df9bed1f43115.setContent(html_5fbc9efafe196a905b73acde6ec0707a);
+            
+        
+
+        marker_d62b6e0b1bde6df90d0c87b7cc94c60f.bindPopup(popup_e87c393c14209281336df9bed1f43115)
+        ;
+
+        
+    
+    
+            var marker_ac5291e61ba32e449c3be055683df2d4 = L.marker(
+                [41.896914369719624, 12.456248960215307],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_72a3b7719368f065dada45d675b8a279 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ac5291e61ba32e449c3be055683df2d4.setIcon(icon_72a3b7719368f065dada45d675b8a279);
+        
+    
+        var popup_29256f8d9f29aeb67d50a0156bed161e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ffc57b9836d4e56c8ae92d38ae649fd2 = $(`<div id="html_ffc57b9836d4e56c8ae92d38ae649fd2" style="width: 100.0%; height: 100.0%;"><b>Silveri</b><br><i>ROMA 1</i><br>Indirizzo: Via Domenico Silveri, 8 - 00168 Roma<br>Telefono: 06-68356325</div>`)[0];
+                popup_29256f8d9f29aeb67d50a0156bed161e.setContent(html_ffc57b9836d4e56c8ae92d38ae649fd2);
+            
+        
+
+        marker_ac5291e61ba32e449c3be055683df2d4.bindPopup(popup_29256f8d9f29aeb67d50a0156bed161e)
+        ;
+
+        
+    
+    
+            var marker_9adee73b4dde1f40f601a21f95de1817 = L.marker(
+                [41.90221647785526, 12.39167709501083],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_58c0b3a81d643ff378703ac11c47facf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9adee73b4dde1f40f601a21f95de1817.setIcon(icon_58c0b3a81d643ff378703ac11c47facf);
+        
+    
+        var popup_ad02c2a05fed908b8a7f562d32997f13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2440c4d216a205c35c8a5e2066670f36 = $(`<div id="html_2440c4d216a205c35c8a5e2066670f36" style="width: 100.0%; height: 100.0%;"><b>Montespaccato</b><br><i>ROMA 1</i><br>Indirizzo: Via Cosimo Tornabuoni, 50 - 00166 Roma<br>Telefono: 06-68356260</div>`)[0];
+                popup_ad02c2a05fed908b8a7f562d32997f13.setContent(html_2440c4d216a205c35c8a5e2066670f36);
+            
+        
+
+        marker_9adee73b4dde1f40f601a21f95de1817.bindPopup(popup_ad02c2a05fed908b8a7f562d32997f13)
+        ;
+
+        
+    
+    
+            var marker_dca1ec81b86a22a55646ede0b7523323 = L.marker(
+                [41.88800845, 12.503451867780196],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_5c73cab6c8151a17475eae19e8ff5eb1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dca1ec81b86a22a55646ede0b7523323.setIcon(icon_5c73cab6c8151a17475eae19e8ff5eb1);
+        
+    
+        var popup_430aaad4ce3e5216ce61e90b1181d255 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4913b3e4b0142cc621086da41dc78de6 = $(`<div id="html_4913b3e4b0142cc621086da41dc78de6" style="width: 100.0%; height: 100.0%;"><b>Santa Maria</b><br><i>ROMA 1</i><br>Indirizzo: Via di S. Giovanni in Laterano, 155 - 00184 Roma<br>Telefono: 06-77305505</div>`)[0];
+                popup_430aaad4ce3e5216ce61e90b1181d255.setContent(html_4913b3e4b0142cc621086da41dc78de6);
+            
+        
+
+        marker_dca1ec81b86a22a55646ede0b7523323.bindPopup(popup_430aaad4ce3e5216ce61e90b1181d255)
+        ;
+
+        
+    
+    
+            var marker_ee131d3f879cee2cd2bf0e9f6665a52e = L.marker(
+                [41.921284747798964, 12.50476550959443],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_df262253778dd17c6315f61a0a0e901d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ee131d3f879cee2cd2bf0e9f6665a52e.setIcon(icon_df262253778dd17c6315f61a0a0e901d);
+        
+    
+        var popup_9cc7241e792733001e33368949a7e0c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f50e9c6db99cc6f2d4437289098ce88 = $(`<div id="html_9f50e9c6db99cc6f2d4437289098ce88" style="width: 100.0%; height: 100.0%;"><b>Tagliamento</b><br><i>ROMA 1</i><br>Indirizzo: Via Tagliamento, 19 - 00198 Roma<br>Telefono: 06-77303585</div>`)[0];
+                popup_9cc7241e792733001e33368949a7e0c1.setContent(html_9f50e9c6db99cc6f2d4437289098ce88);
+            
+        
+
+        marker_ee131d3f879cee2cd2bf0e9f6665a52e.bindPopup(popup_9cc7241e792733001e33368949a7e0c1)
+        ;
+
+        
+    
+    
+            var marker_073970f62bce2dadf54d115f3c993b6d = L.marker(
+                [41.9006201, 12.5094309],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_8e0a1812599be404b71dbe3fde12a2c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_073970f62bce2dadf54d115f3c993b6d.setIcon(icon_8e0a1812599be404b71dbe3fde12a2c3);
+        
+    
+        var popup_258b07e596b4f3b14c77f1d9263e20fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c165a3bd4931b134a5942754a27c3108 = $(`<div id="html_c165a3bd4931b134a5942754a27c3108" style="width: 100.0%; height: 100.0%;"><b>Frentani</b><br><i>ROMA 1</i><br>Indirizzo: Via dei Frentani, 6 - 00185 Roma<br>Telefono: 06-77304160</div>`)[0];
+                popup_258b07e596b4f3b14c77f1d9263e20fb.setContent(html_c165a3bd4931b134a5942754a27c3108);
+            
+        
+
+        marker_073970f62bce2dadf54d115f3c993b6d.bindPopup(popup_258b07e596b4f3b14c77f1d9263e20fb)
+        ;
+
+        
+    
+    
+            var marker_31bfd3d4f8f1011304bede104212d140 = L.marker(
+                [41.955332983135364, 12.533250911700906],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_158a84593c8efd7b6ff9ee63639884f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_31bfd3d4f8f1011304bede104212d140.setIcon(icon_158a84593c8efd7b6ff9ee63639884f5);
+        
+    
+        var popup_66b3531ed320d8624d3297b02c560fe2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_27c5bd4a39a787638a1cc693509f2dc1 = $(`<div id="html_27c5bd4a39a787638a1cc693509f2dc1" style="width: 100.0%; height: 100.0%;"><b>Dina Galli</b><br><i>ROMA 1</i><br>Indirizzo: Via Dina Galli, 3 - 00139 Roma<br>Telefono: 06-77304611</div>`)[0];
+                popup_66b3531ed320d8624d3297b02c560fe2.setContent(html_27c5bd4a39a787638a1cc693509f2dc1);
+            
+        
+
+        marker_31bfd3d4f8f1011304bede104212d140.bindPopup(popup_66b3531ed320d8624d3297b02c560fe2)
+        ;
+
+        
+    
+    
+            var marker_3624d3edabafdbe556a3134650a326e8 = L.marker(
+                [41.94649875, 12.5498265],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_189029125f056afbcd0982766f63d98d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3624d3edabafdbe556a3134650a326e8.setIcon(icon_189029125f056afbcd0982766f63d98d);
+        
+    
+        var popup_932a140c03678c194bdbb4e106b7f0cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_502546573d631be9864bd87f611e1d0b = $(`<div id="html_502546573d631be9864bd87f611e1d0b" style="width: 100.0%; height: 100.0%;"><b>Rovani</b><br><i>ROMA 1</i><br>Indirizzo: Largo Rovani, 5 - 00137 Roma<br>Telefono: 06-77304805</div>`)[0];
+                popup_932a140c03678c194bdbb4e106b7f0cf.setContent(html_502546573d631be9864bd87f611e1d0b);
+            
+        
+
+        marker_3624d3edabafdbe556a3134650a326e8.bindPopup(popup_932a140c03678c194bdbb4e106b7f0cf)
+        ;
+
+        
+    
+    
+            var marker_6b1109f112f0a65f1e316db50cb4c5cb = L.marker(
+                [41.8872868, 12.534669488746891],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_0d0aa3a71869161e9ed7746c93b9ffa7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6b1109f112f0a65f1e316db50cb4c5cb.setIcon(icon_0d0aa3a71869161e9ed7746c93b9ffa7);
+        
+    
+        var popup_208ad72811c0886d0a0d9602b398570a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dceda177f15d2536c7e9d474c65289a6 = $(`<div id="html_dceda177f15d2536c7e9d474c65289a6" style="width: 100.0%; height: 100.0%;"><b>Condottieri</b><br><i>ROMA 2</i><br>Indirizzo: Piazza dei Condottieri, 34 - 00176 Roma<br>Telefono: 06-51008910</div>`)[0];
+                popup_208ad72811c0886d0a0d9602b398570a.setContent(html_dceda177f15d2536c7e9d474c65289a6);
+            
+        
+
+        marker_6b1109f112f0a65f1e316db50cb4c5cb.bindPopup(popup_208ad72811c0886d0a0d9602b398570a)
+        ;
+
+        
+    
+    
+            var marker_9a3bdf330a132ff9403068078e148517 = L.marker(
+                [41.89996971353231, 12.559897904448263],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_b803adfb6b80693712f5232b955a4438 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9a3bdf330a132ff9403068078e148517.setIcon(icon_b803adfb6b80693712f5232b955a4438);
+        
+    
+        var popup_454937931a726c9669ab3c3f6f6e31fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5fb0f9830f05ff380458db4e9f7a2b6c = $(`<div id="html_5fb0f9830f05ff380458db4e9f7a2b6c" style="width: 100.0%; height: 100.0%;"><b>Spencer</b><br><i>ROMA 2</i><br>Indirizzo: Via Herbert Spencer, 282 - 00177 Roma<br>Telefono: 06-51008804</div>`)[0];
+                popup_454937931a726c9669ab3c3f6f6e31fa.setContent(html_5fb0f9830f05ff380458db4e9f7a2b6c);
+            
+        
+
+        marker_9a3bdf330a132ff9403068078e148517.bindPopup(popup_454937931a726c9669ab3c3f6f6e31fa)
+        ;
+
+        
+    
+    
+            var marker_991bd16dfe66afedc99c64494158cf89 = L.marker(
+                [41.88575925, 12.515035051812907],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_1d042c8e38030ecf6ed73b7a43fab94a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_991bd16dfe66afedc99c64494158cf89.setIcon(icon_1d042c8e38030ecf6ed73b7a43fab94a);
+        
+    
+        var popup_e96cb7565d30a86ce2fad100555a964a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1adadb783789065ad191f41902fda1e = $(`<div id="html_b1adadb783789065ad191f41902fda1e" style="width: 100.0%; height: 100.0%;"><b>Monza</b><br><i>ROMA 2</i><br>Indirizzo: Via Monza, 2 - 00182 Roma<br>Telefono: 06-51007246</div>`)[0];
+                popup_e96cb7565d30a86ce2fad100555a964a.setContent(html_b1adadb783789065ad191f41902fda1e);
+            
+        
+
+        marker_991bd16dfe66afedc99c64494158cf89.bindPopup(popup_e96cb7565d30a86ce2fad100555a964a)
+        ;
+
+        
+    
+    
+            var marker_8ce94023a35695b55767adf9a656fae9 = L.marker(
+                [41.879599963474206, 12.504602184227194],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_79b28bf651bf9f0ae048dfdae51f2964 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8ce94023a35695b55767adf9a656fae9.setIcon(icon_79b28bf651bf9f0ae048dfdae51f2964);
+        
+    
+        var popup_a216bdeaacad50d1365aef4ebf67ffc0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_efafc08a5ccb2f6a55d62f1617b65f53 = $(`<div id="html_efafc08a5ccb2f6a55d62f1617b65f53" style="width: 100.0%; height: 100.0%;"><b>Iberia</b><br><i>ROMA 2</i><br>Indirizzo: Via Iberia, 73 - 00183 Roma<br>Telefono: 06-51008585</div>`)[0];
+                popup_a216bdeaacad50d1365aef4ebf67ffc0.setContent(html_efafc08a5ccb2f6a55d62f1617b65f53);
+            
+        
+
+        marker_8ce94023a35695b55767adf9a656fae9.bindPopup(popup_a216bdeaacad50d1365aef4ebf67ffc0)
+        ;
+
+        
+    
+    
+            var marker_28b010bbd797a15356e8f276f496a88b = L.marker(
+                [41.87108990669097, 12.524676075148255],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_04e26e5a77429d3c63ab7471041cf2d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_28b010bbd797a15356e8f276f496a88b.setIcon(icon_04e26e5a77429d3c63ab7471041cf2d1);
+        
+    
+        var popup_523043e4e24df4c46038154fcedaf5d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0367cc519e4bb763319cf86b4eb654e = $(`<div id="html_b0367cc519e4bb763319cf86b4eb654e" style="width: 100.0%; height: 100.0%;"><b>Denina</b><br><i>ROMA 2</i><br>Indirizzo: Via Carlo Denina, 7 - 00179 Roma<br>Telefono: 06-51008575</div>`)[0];
+                popup_523043e4e24df4c46038154fcedaf5d9.setContent(html_b0367cc519e4bb763319cf86b4eb654e);
+            
+        
+
+        marker_28b010bbd797a15356e8f276f496a88b.bindPopup(popup_523043e4e24df4c46038154fcedaf5d9)
+        ;
+
+        
+    
+    
+            var marker_51d48dbc407f1d5c57c3d049b5879627 = L.marker(
+                [41.8607145, 12.4872341],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_9cde22464963f701fc0d7bbd9b52f6b4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_51d48dbc407f1d5c57c3d049b5879627.setIcon(icon_9cde22464963f701fc0d7bbd9b52f6b4);
+        
+    
+        var popup_00bdfb90f2267168a2218ddfd40e3e05 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4541ccb1de824b03dd6ddb1fa2bedf3a = $(`<div id="html_4541ccb1de824b03dd6ddb1fa2bedf3a" style="width: 100.0%; height: 100.0%;"><b>Sette Chiese</b><br><i>ROMA 2</i><br>Indirizzo: Largo Sette Chiese, 25 - 00145 Roma<br>Telefono: 06-51008896</div>`)[0];
+                popup_00bdfb90f2267168a2218ddfd40e3e05.setContent(html_4541ccb1de824b03dd6ddb1fa2bedf3a);
+            
+        
+
+        marker_51d48dbc407f1d5c57c3d049b5879627.bindPopup(popup_00bdfb90f2267168a2218ddfd40e3e05)
+        ;
+
+        
+    
+    
+            var marker_d7ac9cdb1340521581c2798f8b454808 = L.marker(
+                [41.8541839, 12.4953608],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_2f635d68a3cd38c8113cc52b1e341fa3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d7ac9cdb1340521581c2798f8b454808.setIcon(icon_2f635d68a3cd38c8113cc52b1e341fa3);
+        
+    
+        var popup_60f195224f4e113c17f1087345f21347 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1e09bfb03a0af5d7b6cd3dfcc698588a = $(`<div id="html_1e09bfb03a0af5d7b6cd3dfcc698588a" style="width: 100.0%; height: 100.0%;"><b>Via dei Lincei</b><br><i>ROMA 2</i><br>Indirizzo: Via dei Lincei, 93 - 00147 Roma<br>Telefono: 06-51008653</div>`)[0];
+                popup_60f195224f4e113c17f1087345f21347.setContent(html_1e09bfb03a0af5d7b6cd3dfcc698588a);
+            
+        
+
+        marker_d7ac9cdb1340521581c2798f8b454808.bindPopup(popup_60f195224f4e113c17f1087345f21347)
+        ;
+
+        
+    
+    
+            var marker_cb6429a4f9efd75a8c0bde656868d878 = L.marker(
+                [41.78804839475065, 12.441842995093022],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_ee9782444b4377b3b7d825bd1c357244 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cb6429a4f9efd75a8c0bde656868d878.setIcon(icon_ee9782444b4377b3b7d825bd1c357244);
+        
+    
+        var popup_7a6552e298a849056d665d79df574f7c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_03bdbdff91c35c4c74ffb96ceb851af8 = $(`<div id="html_03bdbdff91c35c4c74ffb96ceb851af8" style="width: 100.0%; height: 100.0%;"><b>Stame</b><br><i>ROMA 2</i><br>Indirizzo: Via Nicola Stame, 162 - 00128 Roma<br>Telefono: 06-51005491</div>`)[0];
+                popup_7a6552e298a849056d665d79df574f7c.setContent(html_03bdbdff91c35c4c74ffb96ceb851af8);
+            
+        
+
+        marker_cb6429a4f9efd75a8c0bde656868d878.bindPopup(popup_7a6552e298a849056d665d79df574f7c)
+        ;
+
+        
+    
+    
+            var marker_5593be42f1da1a8d23fac7401c008549 = L.marker(
+                [41.95485643882271, 12.665558352331844],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_99f90122fcaac587f170d42c53c33ad6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5593be42f1da1a8d23fac7401c008549.setIcon(icon_99f90122fcaac587f170d42c53c33ad6);
+        
+    
+        var popup_5f28b1c6e41655a7a042199b6d70e326 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8cb23eef3eabb7665f8df5b7bc3d9ccf = $(`<div id="html_8cb23eef3eabb7665f8df5b7bc3d9ccf" style="width: 100.0%; height: 100.0%;"><b>Silone</b><br><i>ROMA 2</i><br>Indirizzo: Via Ignazio Silone, 100 - 00143 Roma<br>Telefono: 06-51004081</div>`)[0];
+                popup_5f28b1c6e41655a7a042199b6d70e326.setContent(html_8cb23eef3eabb7665f8df5b7bc3d9ccf);
+            
+        
+
+        marker_5593be42f1da1a8d23fac7401c008549.bindPopup(popup_5f28b1c6e41655a7a042199b6d70e326)
+        ;
+
+        
+    
+    
+            var marker_3855b0ab4c11f4bd63027a122179591e = L.marker(
+                [41.94302084932313, 12.58488521571637],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_fe95a0d5f05387fd115545a5ccbae0b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3855b0ab4c11f4bd63027a122179591e.setIcon(icon_fe95a0d5f05387fd115545a5ccbae0b9);
+        
+    
+        var popup_76891a98772694f02799a5ef229eb4e7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37b1f6970535e62873b20638d95f770f = $(`<div id="html_37b1f6970535e62873b20638d95f770f" style="width: 100.0%; height: 100.0%;"><b>San Benedetto</b><br><i>ROMA 2</i><br>Indirizzo: Via S. Benedetto del Tronto, 9 - 00100 Roma<br>Telefono: 06-41436337</div>`)[0];
+                popup_76891a98772694f02799a5ef229eb4e7.setContent(html_37b1f6970535e62873b20638d95f770f);
+            
+        
+
+        marker_3855b0ab4c11f4bd63027a122179591e.bindPopup(popup_76891a98772694f02799a5ef229eb4e7)
+        ;
+
+        
+    
+    
+            var marker_4b20474b1fa7430f39eacede1dc8928e = L.marker(
+                [41.9054437, 12.5894856],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_0f3979a067fe2b92f5dd2cffe15b0933 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4b20474b1fa7430f39eacede1dc8928e.setIcon(icon_0f3979a067fe2b92f5dd2cffe15b0933);
+        
+    
+        var popup_a685917593b8e6071c3f9fd26eeb70b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e084498a135a8506a79f0adfea23bb4e = $(`<div id="html_e084498a135a8506a79f0adfea23bb4e" style="width: 100.0%; height: 100.0%;"><b>Tor Cervara</b><br><i>ROMA 2</i><br>Indirizzo: Via Tor Cervara, 307 - 00155 Roma<br>Telefono: 06-41436234</div>`)[0];
+                popup_a685917593b8e6071c3f9fd26eeb70b3.setContent(html_e084498a135a8506a79f0adfea23bb4e);
+            
+        
+
+        marker_4b20474b1fa7430f39eacede1dc8928e.bindPopup(popup_a685917593b8e6071c3f9fd26eeb70b3)
+        ;
+
+        
+    
+    
+            var marker_3e22b929f99948da81ca318c764348ad = L.marker(
+                [41.8933203, 12.4829321],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_cbe2fa2da63a13f57df1a4431140b485 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3e22b929f99948da81ca318c764348ad.setIcon(icon_cbe2fa2da63a13f57df1a4431140b485);
+        
+    
+        var popup_df198502c2f1f95ce003ec1194259f0a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3f7199560a8e71870a1a63f9f2e865b = $(`<div id="html_a3f7199560a8e71870a1a63f9f2e865b" style="width: 100.0%; height: 100.0%;"><b>Pietralata</b><br><i>ROMA 2</i><br>Indirizzo: Roma<br>Telefono: 06-41435409</div>`)[0];
+                popup_df198502c2f1f95ce003ec1194259f0a.setContent(html_a3f7199560a8e71870a1a63f9f2e865b);
+            
+        
+
+        marker_3e22b929f99948da81ca318c764348ad.bindPopup(popup_df198502c2f1f95ce003ec1194259f0a)
+        ;
+
+        
+    
+    
+            var marker_755bff2055b56c8aa84931e501d86614 = L.marker(
+                [41.8926421, 12.5768513],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_dbea54646ca86867ff0492718d2f1b12 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_755bff2055b56c8aa84931e501d86614.setIcon(icon_dbea54646ca86867ff0492718d2f1b12);
+        
+    
+        var popup_6dafbd11277786c41fc7a4e9d3165f28 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_78878883ef4d642ecc809a74db998bc6 = $(`<div id="html_78878883ef4d642ecc809a74db998bc6" style="width: 100.0%; height: 100.0%;"><b>Manfredonia</b><br><i>ROMA 2</i><br>Indirizzo: Via Manfredonia, 43 - 00171 Roma<br>Telefono: 06-41436452</div>`)[0];
+                popup_6dafbd11277786c41fc7a4e9d3165f28.setContent(html_78878883ef4d642ecc809a74db998bc6);
+            
+        
+
+        marker_755bff2055b56c8aa84931e501d86614.bindPopup(popup_6dafbd11277786c41fc7a4e9d3165f28)
+        ;
+
+        
+    
+    
+            var marker_30fa88ad10fe033314d3752dd6b9e82b = L.marker(
+                [41.88695495, 12.5632888460961],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_ee702cdc78150cd554792cc83d87db24 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_30fa88ad10fe033314d3752dd6b9e82b.setIcon(icon_ee702cdc78150cd554792cc83d87db24);
+        
+    
+        var popup_76fe0b9c89205c740e4d2c993960e4c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c08dc94920780913e3dcd0a3fb4b6f76 = $(`<div id="html_c08dc94920780913e3dcd0a3fb4b6f76" style="width: 100.0%; height: 100.0%;"><b>Resede</b><br><i>ROMA 2</i><br>Indirizzo: Via delle Resede, 1 - 00171 Roma<br>Telefono: 06-41436010</div>`)[0];
+                popup_76fe0b9c89205c740e4d2c993960e4c5.setContent(html_c08dc94920780913e3dcd0a3fb4b6f76);
+            
+        
+
+        marker_30fa88ad10fe033314d3752dd6b9e82b.bindPopup(popup_76fe0b9c89205c740e4d2c993960e4c5)
+        ;
+
+        
+    
+    
+            var marker_275175b2ad31bbb4a794620bbc402e2f = L.marker(
+                [41.8933203, 12.4829321],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_ce85a261db0f5e46bb912a78b2660b69 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_275175b2ad31bbb4a794620bbc402e2f.setIcon(icon_ce85a261db0f5e46bb912a78b2660b69);
+        
+    
+        var popup_16733b21eececfacb381655e8af65ca6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8d42e03973bfa58553497443c60676f = $(`<div id="html_c8d42e03973bfa58553497443c60676f" style="width: 100.0%; height: 100.0%;"><b>Canapiglie</b><br><i>ROMA 2</i><br>Indirizzo: Roma<br>Telefono: 06-41436126</div>`)[0];
+                popup_16733b21eececfacb381655e8af65ca6.setContent(html_c8d42e03973bfa58553497443c60676f);
+            
+        
+
+        marker_275175b2ad31bbb4a794620bbc402e2f.bindPopup(popup_16733b21eececfacb381655e8af65ca6)
+        ;
+
+        
+    
+    
+            var marker_441dcc3524793b9ef213abfda5c6ef63 = L.marker(
+                [41.8634352, 12.546376777230044],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_fab68cab208fcd76057b93065e522d48 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_441dcc3524793b9ef213abfda5c6ef63.setIcon(icon_fab68cab208fcd76057b93065e522d48);
+        
+    
+        var popup_2e8f92b02e8effb3b07262c2e8621832 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bdb9e5f7530e2565ab7e35cf89d7994e = $(`<div id="html_bdb9e5f7530e2565ab7e35cf89d7994e" style="width: 100.0%; height: 100.0%;"><b>Levii</b><br><i>ROMA 2</i><br>Indirizzo: Via dei Levii, 10 - 00174 Roma<br>Telefono: 06-41436034</div>`)[0];
+                popup_2e8f92b02e8effb3b07262c2e8621832.setContent(html_bdb9e5f7530e2565ab7e35cf89d7994e);
+            
+        
+
+        marker_441dcc3524793b9ef213abfda5c6ef63.bindPopup(popup_2e8f92b02e8effb3b07262c2e8621832)
+        ;
+
+        
+    
+    
+            var marker_0ffda47f63ef3684ed96c0927517f06f = L.marker(
+                [41.813995709261185, 12.617067652254848],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_dcbe4637ca0580e5d5f11469ab5d86db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0ffda47f63ef3684ed96c0927517f06f.setIcon(icon_dcbe4637ca0580e5d5f11469ab5d86db);
+        
+    
+        var popup_59f6dc7a61eef66e28fd7cf6c29e6e7c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_78562fab5084a9a02d171187190fd017 = $(`<div id="html_78562fab5084a9a02d171187190fd017" style="width: 100.0%; height: 100.0%;"><b>Stazione di Ciampino</b><br><i>ROMA 2</i><br>Indirizzo: Via della Stazione di Ciampino, 41 - 00118 Roma<br>Telefono: 06-41435102</div>`)[0];
+                popup_59f6dc7a61eef66e28fd7cf6c29e6e7c.setContent(html_78562fab5084a9a02d171187190fd017);
+            
+        
+
+        marker_0ffda47f63ef3684ed96c0927517f06f.bindPopup(popup_59f6dc7a61eef66e28fd7cf6c29e6e7c)
+        ;
+
+        
+    
+    
+            var marker_6f9552a241d8466975789d1f2beee7a8 = L.marker(
+                [41.72955039428328, 12.27666134757428],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_450c39520aec4c6a64c8f4ba092f1923 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6f9552a241d8466975789d1f2beee7a8.setIcon(icon_450c39520aec4c6a64c8f4ba092f1923);
+        
+    
+        var popup_8c1daf48474c54569ed844071568dd9b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5783579a1f8012130b92131e7bb61af8 = $(`<div id="html_5783579a1f8012130b92131e7bb61af8" style="width: 100.0%; height: 100.0%;"><b>Ostia</b><br><i>ROMA 3</i><br>Indirizzo: Lungomare Paolo Toscanelli, 230 - 00121 Ostia<br>Telefono: 06-56483902</div>`)[0];
+                popup_8c1daf48474c54569ed844071568dd9b.setContent(html_5783579a1f8012130b92131e7bb61af8);
+            
+        
+
+        marker_6f9552a241d8466975789d1f2beee7a8.bindPopup(popup_8c1daf48474c54569ed844071568dd9b)
+        ;
+
+        
+    
+    
+            var marker_6e333e004a80529e32afb17c77c58c37 = L.marker(
+                [41.99306290948942, 12.088883644816594],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_a694a7bf21f5ecb603e1897288db6b2b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6e333e004a80529e32afb17c77c58c37.setIcon(icon_a694a7bf21f5ecb603e1897288db6b2b);
+        
+    
+        var popup_590a824560784cd9d95752d48dd57c06 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_04c4b0ce87a111263d27212c1a3df570 = $(`<div id="html_04c4b0ce87a111263d27212c1a3df570" style="width: 100.0%; height: 100.0%;"><b>Cerveteri</b><br><i>ROMA 4</i><br>Indirizzo: Via Martiri Delle Foibe, 95 - 00052 Cerveteri<br>Telefono: 06-96669312</div>`)[0];
+                popup_590a824560784cd9d95752d48dd57c06.setContent(html_04c4b0ce87a111263d27212c1a3df570);
+            
+        
+
+        marker_6e333e004a80529e32afb17c77c58c37.bindPopup(popup_590a824560784cd9d95752d48dd57c06)
+        ;
+
+        
+    
+    
+            var marker_fd560b84e550fa01ba36853fe4f28d31 = L.marker(
+                [42.1282801, 12.130544050000001],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_3bf10011dd5e0e06acef42b48301d1cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fd560b84e550fa01ba36853fe4f28d31.setIcon(icon_3bf10011dd5e0e06acef42b48301d1cf);
+        
+    
+        var popup_01e8e2ffd636d72152f256fecdf14962 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7bbfd5a6225f49bf86a6a4e78f778ce5 = $(`<div id="html_7bbfd5a6225f49bf86a6a4e78f778ce5" style="width: 100.0%; height: 100.0%;"><b>Manziana</b><br><i>ROMA 4</i><br>Indirizzo: Piazza Vittorio Veneto, 3 - 00066 Manziana<br>Telefono: 06-99893630</div>`)[0];
+                popup_01e8e2ffd636d72152f256fecdf14962.setContent(html_7bbfd5a6225f49bf86a6a4e78f778ce5);
+            
+        
+
+        marker_fd560b84e550fa01ba36853fe4f28d31.bindPopup(popup_01e8e2ffd636d72152f256fecdf14962)
+        ;
+
+        
+    
+    
+            var marker_eb47316ecec877780f4c5771f28e5b63 = L.marker(
+                [42.1020459, 12.1777274],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_c66cd0599bfeb400229cdc17549c4750 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_eb47316ecec877780f4c5771f28e5b63.setIcon(icon_c66cd0599bfeb400229cdc17549c4750);
+        
+    
+        var popup_c79bf7966a9be85c13e2b0360c34a22f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_54939f1ce4d2810ecd027cc49d904b52 = $(`<div id="html_54939f1ce4d2810ecd027cc49d904b52" style="width: 100.0%; height: 100.0%;"><b>Bracciano</b><br><i>ROMA 4</i><br>Indirizzo: Largo dell'Ospedale Vecchio, 8 - 00062 Bracciano<br>Telefono: 06-96669124</div>`)[0];
+                popup_c79bf7966a9be85c13e2b0360c34a22f.setContent(html_54939f1ce4d2810ecd027cc49d904b52);
+            
+        
+
+        marker_eb47316ecec877780f4c5771f28e5b63.bindPopup(popup_c79bf7966a9be85c13e2b0360c34a22f)
+        ;
+
+        
+    
+    
+            var marker_4f00b27648014f7c158398af7712a3aa = L.marker(
+                [42.13821909196091, 12.381548375120703],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_0baae9e036fdb76c6543b60f13ea3875 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4f00b27648014f7c158398af7712a3aa.setIcon(icon_0baae9e036fdb76c6543b60f13ea3875);
+        
+    
+        var popup_50e804889f8565810cd3f2981dc2cb42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ed7f7769675e4b6e8912d688f1ac4dc7 = $(`<div id="html_ed7f7769675e4b6e8912d688f1ac4dc7" style="width: 100.0%; height: 100.0%;"><b>Campagnano</b><br><i>ROMA 4</i><br>Indirizzo: Via Adriano I, 23 - 00063 Campagnano di Roma<br>Telefono: 06-96669291</div>`)[0];
+                popup_50e804889f8565810cd3f2981dc2cb42.setContent(html_ed7f7769675e4b6e8912d688f1ac4dc7);
+            
+        
+
+        marker_4f00b27648014f7c158398af7712a3aa.bindPopup(popup_50e804889f8565810cd3f2981dc2cb42)
+        ;
+
+        
+    
+    
+            var marker_5cec8a8a4aa99e50e46adc868f67b6be = L.marker(
+                [42.1647812, 12.5873251],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_7cd9ce516524cf508e41d5655b233bcb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5cec8a8a4aa99e50e46adc868f67b6be.setIcon(icon_7cd9ce516524cf508e41d5655b233bcb);
+        
+    
+        var popup_699aa2671030758f24fb7ab0e27b6c0d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_41e1687af57d1e6923f67ec3ae597f20 = $(`<div id="html_41e1687af57d1e6923f67ec3ae597f20" style="width: 100.0%; height: 100.0%;"><b>Fiano Romano</b><br><i>ROMA 4</i><br>Indirizzo: Via Guido Rossa, 37 - 00065 Fiano Romano<br>Telefono: 06-96669110</div>`)[0];
+                popup_699aa2671030758f24fb7ab0e27b6c0d.setContent(html_41e1687af57d1e6923f67ec3ae597f20);
+            
+        
+
+        marker_5cec8a8a4aa99e50e46adc868f67b6be.bindPopup(popup_699aa2671030758f24fb7ab0e27b6c0d)
+        ;
+
+        
+    
+    
+            var marker_88cf8ba83ec0fc4aca49848a56f9d46c = L.marker(
+                [42.05964936210088, 12.5942147453025],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_ef5666b6fb9c4077dbba3f566326336a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_88cf8ba83ec0fc4aca49848a56f9d46c.setIcon(icon_ef5666b6fb9c4077dbba3f566326336a);
+        
+    
+        var popup_b5bb88c086c5373075b09ec63bd8887c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1169d2ac5376cc45008dce9094d64a6a = $(`<div id="html_1169d2ac5376cc45008dce9094d64a6a" style="width: 100.0%; height: 100.0%;"><b>Monterotondo</b><br><i>ROMA 5</i><br>Indirizzo: Via dell'Aeronautica, 53/b - 00015 Monterotondo<br>Telefono: 06-90093584</div>`)[0];
+                popup_b5bb88c086c5373075b09ec63bd8887c.setContent(html_1169d2ac5376cc45008dce9094d64a6a);
+            
+        
+
+        marker_88cf8ba83ec0fc4aca49848a56f9d46c.bindPopup(popup_b5bb88c086c5373075b09ec63bd8887c)
+        ;
+
+        
+    
+    
+            var marker_cb2e539fb75adeff58e7f719ab23cc72 = L.marker(
+                [41.99595822644862, 12.618732566678583],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_dd28ef969dbbca64566ccd1a066f8c95 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cb2e539fb75adeff58e7f719ab23cc72.setIcon(icon_dd28ef969dbbca64566ccd1a066f8c95);
+        
+    
+        var popup_f2df418472739d5cab7e890e46417d69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9626bd22535e674f268bbf8425dfc353 = $(`<div id="html_9626bd22535e674f268bbf8425dfc353" style="width: 100.0%; height: 100.0%;"><b>Fonte Nuova</b><br><i>ROMA 5</i><br>Indirizzo: Via IV Novembre, 2 - 00013 Fonte Nuova<br>Telefono: 06-90093586</div>`)[0];
+                popup_f2df418472739d5cab7e890e46417d69.setContent(html_9626bd22535e674f268bbf8425dfc353);
+            
+        
+
+        marker_cb2e539fb75adeff58e7f719ab23cc72.bindPopup(popup_f2df418472739d5cab7e890e46417d69)
+        ;
+
+        
+    
+    
+            var marker_f4064ab2e34fd39e84cd70e31152fd52 = L.marker(
+                [41.954555015728374, 12.700753694962513],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_78aba243a7fe6e29396fdb4e4927adb8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f4064ab2e34fd39e84cd70e31152fd52.setIcon(icon_78aba243a7fe6e29396fdb4e4927adb8);
+        
+    
+        var popup_878a5a8c953504ecd48ac6fb877c289a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_913060c195d0f8e1c7ad9f7a2e8385af = $(`<div id="html_913060c195d0f8e1c7ad9f7a2e8385af" style="width: 100.0%; height: 100.0%;"><b>Guidonia</b><br><i>ROMA 5</i><br>Indirizzo: Via dei Castagni, 20/22 - 00012 Guidonia<br>Telefono: 0774-779735</div>`)[0];
+                popup_878a5a8c953504ecd48ac6fb877c289a.setContent(html_913060c195d0f8e1c7ad9f7a2e8385af);
+            
+        
+
+        marker_f4064ab2e34fd39e84cd70e31152fd52.bindPopup(popup_878a5a8c953504ecd48ac6fb877c289a)
+        ;
+
+        
+    
+    
+            var marker_50e6cefafaa04e86ea25c129d002aa06 = L.marker(
+                [42.067468774050724, 12.765421012979374],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_a8c7e16474540ab5fc8cad0297f65ec7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_50e6cefafaa04e86ea25c129d002aa06.setIcon(icon_a8c7e16474540ab5fc8cad0297f65ec7);
+        
+    
+        var popup_fb3506582d426e48821509550cf94fe2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b8e6ad75ef9af7f07457fb659c93f9f7 = $(`<div id="html_b8e6ad75ef9af7f07457fb659c93f9f7" style="width: 100.0%; height: 100.0%;"><b>Palombara Sabina</b><br><i>ROMA 5</i><br>Indirizzo: Via Roma, 20 - 00018 Palombara Sabina<br>Telefono: 0774-637462</div>`)[0];
+                popup_fb3506582d426e48821509550cf94fe2.setContent(html_b8e6ad75ef9af7f07457fb659c93f9f7);
+            
+        
+
+        marker_50e6cefafaa04e86ea25c129d002aa06.bindPopup(popup_fb3506582d426e48821509550cf94fe2)
+        ;
+
+        
+    
+    
+            var marker_408396de61a8ff833672a8830ccad965 = L.marker(
+                [41.96498225, 12.80091887117848],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_444374c423df65c0f8535dd680370550 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_408396de61a8ff833672a8830ccad965.setIcon(icon_444374c423df65c0f8535dd680370550);
+        
+    
+        var popup_fad566fa400894a6acbe9eb206a0f4b4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_050ca53015737a9fd19426d6680ffb20 = $(`<div id="html_050ca53015737a9fd19426d6680ffb20" style="width: 100.0%; height: 100.0%;"><b>Tivoli</b><br><i>ROMA 5</i><br>Indirizzo: Piazza Massimo, 1 - 00019 Tivoli<br>Telefono: 0774-704729</div>`)[0];
+                popup_fad566fa400894a6acbe9eb206a0f4b4.setContent(html_050ca53015737a9fd19426d6680ffb20);
+            
+        
+
+        marker_408396de61a8ff833672a8830ccad965.bindPopup(popup_fad566fa400894a6acbe9eb206a0f4b4)
+        ;
+
+        
+    
+    
+            var marker_dd9f433dd261bc9255f08d280e94034f = L.marker(
+                [41.83895685, 12.888326371557913],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_1413cc2c541eef44018b43b584fe675e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dd9f433dd261bc9255f08d280e94034f.setIcon(icon_1413cc2c541eef44018b43b584fe675e);
+        
+    
+        var popup_eb9029358f0a6eace3b6995eb9f517af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_162a17fff974451f7479b24fa0b824e8 = $(`<div id="html_162a17fff974451f7479b24fa0b824e8" style="width: 100.0%; height: 100.0%;"><b>Palestrina</b><br><i>ROMA 5</i><br>Indirizzo: Via Porta S. Martino, 38 - 00036 Palestrina<br>Telefono: 06-95322624</div>`)[0];
+                popup_eb9029358f0a6eace3b6995eb9f517af.setContent(html_162a17fff974451f7479b24fa0b824e8);
+            
+        
+
+        marker_dd9f433dd261bc9255f08d280e94034f.bindPopup(popup_eb9029358f0a6eace3b6995eb9f517af)
+        ;
+
+        
+    
+    
+            var marker_10db314b85b917aa4138b9ebcc42eccf = L.marker(
+                [41.729886449999995, 12.999407556286387],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_2c18df60a59dd8e68954408a28e08e57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_10db314b85b917aa4138b9ebcc42eccf.setIcon(icon_2c18df60a59dd8e68954408a28e08e57);
+        
+    
+        var popup_c1b880475ac31f010a84585fc2b99087 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_36fb6ae893a15a82e914941c0cabdfc2 = $(`<div id="html_36fb6ae893a15a82e914941c0cabdfc2" style="width: 100.0%; height: 100.0%;"><b>Colleferro</b><br><i>ROMA 5</i><br>Indirizzo: Via degli Esplosivi, 9 - 00034 Colleferro<br>Telefono: 06-97097541</div>`)[0];
+                popup_c1b880475ac31f010a84585fc2b99087.setContent(html_36fb6ae893a15a82e914941c0cabdfc2);
+            
+        
+
+        marker_10db314b85b917aa4138b9ebcc42eccf.bindPopup(popup_c1b880475ac31f010a84585fc2b99087)
+        ;
+
+        
+    
+    
+            var marker_8a1de75eef75f74194b4ae10d30e4cfd = L.marker(
+                [41.697561639657046, 12.70259591620352],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_eaf11cdd0edf4724b8dc5019fee48425 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8a1de75eef75f74194b4ae10d30e4cfd.setIcon(icon_eaf11cdd0edf4724b8dc5019fee48425);
+        
+    
+        var popup_9e4a86f04dfd7aafc06af97ae8364fb6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e8fdd682adf47dc0dd61b8c4ef7b9293 = $(`<div id="html_e8fdd682adf47dc0dd61b8c4ef7b9293" style="width: 100.0%; height: 100.0%;"><b>Genzano</b><br><i>ROMA 6</i><br>Indirizzo: Viale Unione Sovietica, 14 - 00045 Genzano di Roma<br>Telefono: 06-93273582</div>`)[0];
+                popup_9e4a86f04dfd7aafc06af97ae8364fb6.setContent(html_e8fdd682adf47dc0dd61b8c4ef7b9293);
+            
+        
+
+        marker_8a1de75eef75f74194b4ae10d30e4cfd.bindPopup(popup_9e4a86f04dfd7aafc06af97ae8364fb6)
+        ;
+
+        
+    
+    
+            var marker_c3576f914132395f164f23b188ff7bc0 = L.marker(
+                [41.7227405, 12.676069865227184],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_5ed3a10503387017ba262624b3b4e883 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c3576f914132395f164f23b188ff7bc0.setIcon(icon_5ed3a10503387017ba262624b3b4e883);
+        
+    
+        var popup_12f21608687dd5ac32044893c3f8dd87 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d27d31446269a7c985934820e79c753f = $(`<div id="html_d27d31446269a7c985934820e79c753f" style="width: 100.0%; height: 100.0%;"><b>Ariccia</b><br><i>ROMA 6</i><br>Indirizzo: Via delle Cerquette, 2 - 00072 Ariccia<br>Telefono: 06-93273432</div>`)[0];
+                popup_12f21608687dd5ac32044893c3f8dd87.setContent(html_d27d31446269a7c985934820e79c753f);
+            
+        
+
+        marker_c3576f914132395f164f23b188ff7bc0.bindPopup(popup_12f21608687dd5ac32044893c3f8dd87)
+        ;
+
+        
+    
+    
+            var marker_8bfa7f490c6e3b7ad2b3934598acacf4 = L.marker(
+                [41.769820172234134, 12.667354911854208],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_8efbc69370868e0a34d8070a6de1c219 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8bfa7f490c6e3b7ad2b3934598acacf4.setIcon(icon_8efbc69370868e0a34d8070a6de1c219);
+        
+    
+        var popup_f925a798f763803d1fd83aa1cd250757 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f85b1d7962488b052fe3ae3ec47d98c5 = $(`<div id="html_f85b1d7962488b052fe3ae3ec47d98c5" style="width: 100.0%; height: 100.0%;"><b>Marino</b><br><i>ROMA 6</i><br>Indirizzo: Viale XXIV Maggio, 2 - 00047 Marino<br>Telefono: 06-93273174</div>`)[0];
+                popup_f925a798f763803d1fd83aa1cd250757.setContent(html_f85b1d7962488b052fe3ae3ec47d98c5);
+            
+        
+
+        marker_8bfa7f490c6e3b7ad2b3934598acacf4.bindPopup(popup_f925a798f763803d1fd83aa1cd250757)
+        ;
+
+        
+    
+    
+            var marker_bb588fb382a3dc1abcd7aa69535c9f4a = L.marker(
+                [41.8058258293857, 12.602876935268556],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_8a0da91794dfebb7eccf4b525ab6d282 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bb588fb382a3dc1abcd7aa69535c9f4a.setIcon(icon_8a0da91794dfebb7eccf4b525ab6d282);
+        
+    
+        var popup_dece005161d3720d791a7e15ab4ae8e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aee76165f2361048c08d014d96e691da = $(`<div id="html_aee76165f2361048c08d014d96e691da" style="width: 100.0%; height: 100.0%;"><b>Ciampino</b><br><i>ROMA 6</i><br>Indirizzo: Via Mario Calò, 5 - 00043 Ciampino<br>Telefono: 06-93275529</div>`)[0];
+                popup_dece005161d3720d791a7e15ab4ae8e9.setContent(html_aee76165f2361048c08d014d96e691da);
+            
+        
+
+        marker_bb588fb382a3dc1abcd7aa69535c9f4a.bindPopup(popup_dece005161d3720d791a7e15ab4ae8e9)
+        ;
+
+        
+    
+    
+            var marker_64fda0e3e297e8c4a3fc60fa46cd6ef0 = L.marker(
+                [41.815603049296804, 12.674438756032226],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_1458e40c2a1435fb5fe35b0c8f72e733 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_64fda0e3e297e8c4a3fc60fa46cd6ef0.setIcon(icon_1458e40c2a1435fb5fe35b0c8f72e733);
+        
+    
+        var popup_c195596a51661ed98ec8edd2257e8d95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a048d0936dd9d03e416fa84844219b1c = $(`<div id="html_a048d0936dd9d03e416fa84844219b1c" style="width: 100.0%; height: 100.0%;"><b>Frascati</b><br><i>ROMA 6</i><br>Indirizzo: Via Enrico Fermi, 2 - 00044 Frascati<br>Telefono: 06-93274128</div>`)[0];
+                popup_c195596a51661ed98ec8edd2257e8d95.setContent(html_a048d0936dd9d03e416fa84844219b1c);
+            
+        
+
+        marker_64fda0e3e297e8c4a3fc60fa46cd6ef0.bindPopup(popup_c195596a51661ed98ec8edd2257e8d95)
+        ;
+
+        
+    
+    
+            var marker_764e9e26ddff24c31e19ebbadbeef607 = L.marker(
+                [41.7875133, 12.6664039],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_fd5ac78d58940dd130c10c0c0024d174 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_764e9e26ddff24c31e19ebbadbeef607.setIcon(icon_fd5ac78d58940dd130c10c0c0024d174);
+        
+    
+        var popup_fd58a00de31712eefcf31a4a1f95722b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92276a85ff6d47a3ec7bbb1b09b0b242 = $(`<div id="html_92276a85ff6d47a3ec7bbb1b09b0b242" style="width: 100.0%; height: 100.0%;"><b>Grottaferrata</b><br><i>ROMA 6</i><br>Indirizzo: Viale San Nilo, 4 - 00046 Grottaferrata<br>Telefono: 06-93274128</div>`)[0];
+                popup_fd58a00de31712eefcf31a4a1f95722b.setContent(html_92276a85ff6d47a3ec7bbb1b09b0b242);
+            
+        
+
+        marker_764e9e26ddff24c31e19ebbadbeef607.bindPopup(popup_fd58a00de31712eefcf31a4a1f95722b)
+        ;
+
+        
+    
+    
+            var marker_0a0464acdc454e3ff9f014ab11e5d87b = L.marker(
+                [41.79320521875322, 12.757535673774157],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_1e00ba9daabef211b43e9dabc33796c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0a0464acdc454e3ff9f014ab11e5d87b.setIcon(icon_1e00ba9daabef211b43e9dabc33796c9);
+        
+    
+        var popup_b587e5539f5d70d71b73fdcd7200cde2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_706400060d0ee5e72caf2273fae4453a = $(`<div id="html_706400060d0ee5e72caf2273fae4453a" style="width: 100.0%; height: 100.0%;"><b>Rocca Priora</b><br><i>ROMA 6</i><br>Indirizzo: Via Malpasso d'Acqua, 2 - 00079 Rocca Priora<br>Telefono: 06-93274569</div>`)[0];
+                popup_b587e5539f5d70d71b73fdcd7200cde2.setContent(html_706400060d0ee5e72caf2273fae4453a);
+            
+        
+
+        marker_0a0464acdc454e3ff9f014ab11e5d87b.bindPopup(popup_b587e5539f5d70d71b73fdcd7200cde2)
+        ;
+
+        
+    
+    
+            var marker_22bb0721fd4bdeeb43e5f64c2292d2cf = L.marker(
+                [41.69133145, 12.7887333],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_debee50e92aa8a1b281a44053d83776f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_22bb0721fd4bdeeb43e5f64c2292d2cf.setIcon(icon_debee50e92aa8a1b281a44053d83776f);
+        
+    
+        var popup_04463fa3472cd0a1f2c6c5f5cd41cd1a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee916b8715abce0295b0a7b0ffb71a37 = $(`<div id="html_ee916b8715abce0295b0a7b0ffb71a37" style="width: 100.0%; height: 100.0%;"><b>Velletri</b><br><i>ROMA 6</i><br>Indirizzo: Via San Biagio, 12 - 00049 Velletri<br>Telefono: 06-93272446</div>`)[0];
+                popup_04463fa3472cd0a1f2c6c5f5cd41cd1a.setContent(html_ee916b8715abce0295b0a7b0ffb71a37);
+            
+        
+
+        marker_22bb0721fd4bdeeb43e5f64c2292d2cf.bindPopup(popup_04463fa3472cd0a1f2c6c5f5cd41cd1a)
+        ;
+
+        
+    
+    
+            var marker_6f84e2f4da48d1cc11a661dac34742f5 = L.marker(
+                [41.45731545023392, 12.65596827067107],
+                {}
+            ).addTo(map_8b50fa69486cdb30816b2a02307940d8);
+        
+    
+            var icon_e7a84547edce71355883dcff1970aebd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6f84e2f4da48d1cc11a661dac34742f5.setIcon(icon_e7a84547edce71355883dcff1970aebd);
+        
+    
+        var popup_624bf085b1f660347d3945ff1dd008e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b4f4e6e60db152ce048868329f72e28 = $(`<div id="html_4b4f4e6e60db152ce048868329f72e28" style="width: 100.0%; height: 100.0%;"><b>Nettuno</b><br><i>ROMA 6</i><br>Indirizzo: Piazza San Francesco, 4 - 00048 Nettuno<br>Telefono: 06-93276546</div>`)[0];
+                popup_624bf085b1f660347d3945ff1dd008e3.setContent(html_4b4f4e6e60db152ce048868329f72e28);
+            
+        
+
+        marker_6f84e2f4da48d1cc11a661dac34742f5.bindPopup(popup_624bf085b1f660347d3945ff1dd008e3)
+        ;
+
+        
+    
+</script>
+</html>
