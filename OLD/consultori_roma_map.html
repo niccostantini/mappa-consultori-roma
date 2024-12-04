@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fb5d6dce95bb46db489a7e4632bbc3c8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            bottom: 50px; left: 50px; width: fit-content; height: fit-content; 
+            background-color: white; z-index:9999; font-size:14px; opacity: 0.8; border-radius: 6px;
+            border:2px solid grey; padding: 10px;">
+    <b>Legenda ASL</b><br>
+    <i class="fa fa-map-marker fa-2x" style="color:blue"></i> ROMA 1<br>
+    <i class="fa fa-map-marker fa-2x" style="color:green"></i> ROMA 2<br>
+    <i class="fa fa-map-marker fa-2x" style="color:red"></i> ROMA 3<br>
+    <i class="fa fa-map-marker fa-2x" style="color:purple"></i> ROMA 4<br>
+    <i class="fa fa-map-marker fa-2x" style="color:orange"></i> ROMA 5<br>
+    <i class="fa fa-map-marker fa-2x" style="color:darkred"></i> ROMA 6<br>
+</div>
+    
+            <div class="folium-map" id="map_fb5d6dce95bb46db489a7e4632bbc3c8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fb5d6dce95bb46db489a7e4632bbc3c8 = L.map(
+                "map_fb5d6dce95bb46db489a7e4632bbc3c8",
+                {
+                    center: [41.9028, 12.4964],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_40f644f2c772a65da737e914755fcc42 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var marker_9a79d267b879e045dacff95d8ed76eb5 = L.marker(
+                [41.99615346265864, 12.481343816978775],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_78033957a3c7f2468bd888edcc1ad5ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9a79d267b879e045dacff95d8ed76eb5.setIcon(icon_78033957a3c7f2468bd888edcc1ad5ec);
+        
+    
+        var popup_1b6dce4fcaecb98a9a3d4c6e60299601 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_c09275f880a211bbe007b1357ab933aa = $(`<div id="html_c09275f880a211bbe007b1357ab933aa" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE 'CLAUZETTO'</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA SAN DANIELE DEL FRIULI 8, 00188, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 60105331                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.labaro@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00-13:00 Lun e Mer 8:00-13:00/14:00-17:00                           </p>                             </div>`)[0];
+                popup_1b6dce4fcaecb98a9a3d4c6e60299601.setContent(html_c09275f880a211bbe007b1357ab933aa);
+            
+        
+
+        marker_9a79d267b879e045dacff95d8ed76eb5.bindPopup(popup_1b6dce4fcaecb98a9a3d4c6e60299601)
+        ;
+
+        
+    
+    
+            var marker_e2f947700bcb1d987853437d386fdca0 = L.marker(
+                [41.958121409834604, 12.454397110571826],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_a6ea3ebf5c24ecbd8463bbe33914c199 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e2f947700bcb1d987853437d386fdca0.setIcon(icon_a6ea3ebf5c24ecbd8463bbe33914c199);
+        
+    
+        var popup_a4bf12117f2b12e950ef8411863cc730 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_9719e86f0fd9968b99eaf2daf8b4537a = $(`<div id="html_9719e86f0fd9968b99eaf2daf8b4537a" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE "CASSIA"</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA CASSIA 472, 00189, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 60105674                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.cassia@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00-13:00 Mar e Gio 8:00-13:00/14:00-17:00                           </p>                             </div>`)[0];
+                popup_a4bf12117f2b12e950ef8411863cc730.setContent(html_9719e86f0fd9968b99eaf2daf8b4537a);
+            
+        
+
+        marker_e2f947700bcb1d987853437d386fdca0.bindPopup(popup_a4bf12117f2b12e950ef8411863cc730)
+        ;
+
+        
+    
+    
+            var marker_8f535f9e054b0729b30b2f5033565a4e = L.marker(
+                [41.91517990517069, 12.45817763445216],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_a53bd2e82c1eb8b313873830d2226afe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8f535f9e054b0729b30b2f5033565a4e.setIcon(icon_a53bd2e82c1eb8b313873830d2226afe);
+        
+    
+        var popup_1ee36da7974f9ce848f81cd890f7cd43 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_323afb8f63418019ac73d834ace36cf5 = $(`<div id="html_323afb8f63418019ac73d834ace36cf5" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE 'IMRE'</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIALE ANGELICO, 28, 00136, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 6010.6232                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.imre@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00-13:00 e Lun-Mar-Mer 14:00-17:00                           </p>                             </div>`)[0];
+                popup_1ee36da7974f9ce848f81cd890f7cd43.setContent(html_323afb8f63418019ac73d834ace36cf5);
+            
+        
+
+        marker_8f535f9e054b0729b30b2f5033565a4e.bindPopup(popup_1ee36da7974f9ce848f81cd890f7cd43)
+        ;
+
+        
+    
+    
+            var marker_4f971b45c87ec9c47b60aeb0db143a1f = L.marker(
+                [41.920130076436614, 12.414950279830073],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_23672bd656200737609d51216248bca1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4f971b45c87ec9c47b60aeb0db143a1f.setIcon(icon_23672bd656200737609d51216248bca1);
+        
+    
+        var popup_114073cc41355069288a3d91c5071f74 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_69b19eacacf8a8b2486e9ccd1e32fec2 = $(`<div id="html_69b19eacacf8a8b2486e9ccd1e32fec2" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE 'JACOBINI – PRIMAVALLE'</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA LODOVICO JACOBINI, 6, 00168, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 6010.5202                                <li style='list-style-type: square'><b>Email/sito</b>: consultori14@aslroma1.it spaziogiovani14@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00-13:00 - Mar e Gio 8:00-13:00/14:00-16:30                           </p>                             </div>`)[0];
+                popup_114073cc41355069288a3d91c5071f74.setContent(html_69b19eacacf8a8b2486e9ccd1e32fec2);
+            
+        
+
+        marker_4f971b45c87ec9c47b60aeb0db143a1f.bindPopup(popup_114073cc41355069288a3d91c5071f74)
+        ;
+
+        
+    
+    
+            var marker_b18e5fcefa72e7174c70a3f548adb562 = L.marker(
+                [41.896914369719624, 12.456248960215307],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_1d8c10d337b089bcd9fd4fc7f49fb7b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b18e5fcefa72e7174c70a3f548adb562.setIcon(icon_1d8c10d337b089bcd9fd4fc7f49fb7b5);
+        
+    
+        var popup_b409e8af1dee2701d3e8fb900078fff9 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_1c4372672bdc0fffec5bac05f1cff2b6 = $(`<div id="html_1c4372672bdc0fffec5bac05f1cff2b6" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE 'SILVERI'</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA DOMENICO SILVERI 8, 00168, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 60105325                               <li style='list-style-type: square'><b>Email/sito</b>: coordinamentoconsultori@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00-13:30 - Mar, Mer, Gio 14:00-17:00                           </p>                             </div>`)[0];
+                popup_b409e8af1dee2701d3e8fb900078fff9.setContent(html_1c4372672bdc0fffec5bac05f1cff2b6);
+            
+        
+
+        marker_b18e5fcefa72e7174c70a3f548adb562.bindPopup(popup_b409e8af1dee2701d3e8fb900078fff9)
+        ;
+
+        
+    
+    
+            var marker_c0bdf9502871874f6923f2e133ccca41 = L.marker(
+                [41.90221647785526, 12.39167709501083],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_609769d31305628efaafca6fb227b5f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c0bdf9502871874f6923f2e133ccca41.setIcon(icon_609769d31305628efaafca6fb227b5f7);
+        
+    
+        var popup_bba30b6298a77cf91d1d6d62e107bf44 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ccfa925fa5dde114bbac1b3706632aec = $(`<div id="html_ccfa925fa5dde114bbac1b3706632aec" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE 'MONTESPACCATO'</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA COSIMO TORNABUONI 50, 00166, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 60106263                               <li style='list-style-type: square'><b>Email/sito</b>: coordinamentoconsultori@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00-13:30 - Lun-Gio 14:00-17:00                           </p>                             </div>`)[0];
+                popup_bba30b6298a77cf91d1d6d62e107bf44.setContent(html_ccfa925fa5dde114bbac1b3706632aec);
+            
+        
+
+        marker_c0bdf9502871874f6923f2e133ccca41.bindPopup(popup_bba30b6298a77cf91d1d6d62e107bf44)
+        ;
+
+        
+    
+    
+            var marker_e3dde34edc1ba359a3764e1c30669c17 = L.marker(
+                [41.88800845, 12.503451867780196],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_8cab927fe75d098c10857fd3c20112d9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e3dde34edc1ba359a3764e1c30669c17.setIcon(icon_8cab927fe75d098c10857fd3c20112d9);
+        
+    
+        var popup_6025b819d5fce7bb3df225c68bd30e29 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_f8fc12ac3d635520e21abd1f590625c1 = $(`<div id="html_f8fc12ac3d635520e21abd1f590625c1" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE 'SANTA MARIA – PUCCINOTTI'</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA DI S. GIOVANNI IN LATERANO, 155, 00184, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 60105505/56                                <li style='list-style-type: square'><b>Email/sito</b>: coordinamentoconsultori@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-12:30 Lun-Gio 14:30-16:30                           </p>                             </div>`)[0];
+                popup_6025b819d5fce7bb3df225c68bd30e29.setContent(html_f8fc12ac3d635520e21abd1f590625c1);
+            
+        
+
+        marker_e3dde34edc1ba359a3764e1c30669c17.bindPopup(popup_6025b819d5fce7bb3df225c68bd30e29)
+        ;
+
+        
+    
+    
+            var marker_84438f32c2971907d4a7905ade740bbb = L.marker(
+                [41.921284747798964, 12.50476550959443],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_f9e365f609b9a2875cf48ceca6365fa7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_84438f32c2971907d4a7905ade740bbb.setIcon(icon_f9e365f609b9a2875cf48ceca6365fa7);
+        
+    
+        var popup_9222a4e390bd15c0bb7b1ba4d0b2399c = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_700ae106fde62e65823b0058310aa80e = $(`<div id="html_700ae106fde62e65823b0058310aa80e" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE 'TAGLIAMENTO'</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA TAGLIAMENTO 19, 00198, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 6010.5958                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.2ds@aslroma1.it coordinamentoconsultori@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 9:00-13:00- Mar e Gio 14:00-16:30                           </p>                             </div>`)[0];
+                popup_9222a4e390bd15c0bb7b1ba4d0b2399c.setContent(html_700ae106fde62e65823b0058310aa80e);
+            
+        
+
+        marker_84438f32c2971907d4a7905ade740bbb.bindPopup(popup_9222a4e390bd15c0bb7b1ba4d0b2399c)
+        ;
+
+        
+    
+    
+            var marker_ec1dff000efa697b96a3fe243954f212 = L.marker(
+                [41.9006201, 12.5094309],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_23dd8911f8944672987b3142bc3d479a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ec1dff000efa697b96a3fe243954f212.setIcon(icon_23dd8911f8944672987b3142bc3d479a);
+        
+    
+        var popup_ff52313d42b73f4ad7745160b9904375 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ce55ee894ee6b0ed6fc37c6632ac49bb = $(`<div id="html_ce55ee894ee6b0ed6fc37c6632ac49bb" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE 'FRENTANI'</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA DEI FRENTANI, 6, 00185, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 60105560                               <li style='list-style-type: square'><b>Email/sito</b>: consultori.2ds@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00-13:00 Lun-Mer 14:00-16:30                           </p>                             </div>`)[0];
+                popup_ff52313d42b73f4ad7745160b9904375.setContent(html_ce55ee894ee6b0ed6fc37c6632ac49bb);
+            
+        
+
+        marker_ec1dff000efa697b96a3fe243954f212.bindPopup(popup_ff52313d42b73f4ad7745160b9904375)
+        ;
+
+        
+    
+    
+            var marker_640cb92bd04b12a5afaec8f6f1898057 = L.marker(
+                [41.94861718464768, 12.532350381007776],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_bfabba6d711ea9a56b0d6b524d4c39af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_640cb92bd04b12a5afaec8f6f1898057.setIcon(icon_bfabba6d711ea9a56b0d6b524d4c39af);
+        
+    
+        var popup_c9df977a66f4ac15fdc9798353bd14fd = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_e4d142916eb28071196e79b98c051172 = $(`<div id="html_e4d142916eb28071196e79b98c051172" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE MONTE ROCCHETTA</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: Via Monte Rocchetta, 14, 00139, Roma                               <li style='list-style-type: square'><b>Telefono</b>: 06 60105052                               <li style='list-style-type: square'><b>Email/sito</b>: consultori.3ds@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00-13:00/14:00-17:00                           </p>                             </div>`)[0];
+                popup_c9df977a66f4ac15fdc9798353bd14fd.setContent(html_e4d142916eb28071196e79b98c051172);
+            
+        
+
+        marker_640cb92bd04b12a5afaec8f6f1898057.bindPopup(popup_c9df977a66f4ac15fdc9798353bd14fd)
+        ;
+
+        
+    
+    
+            var marker_220b97da2e0e787255e3f87585e7e0f0 = L.marker(
+                [41.955332983135364, 12.533250911700906],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_995731d967264874a190a6f102d87575 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_220b97da2e0e787255e3f87585e7e0f0.setIcon(icon_995731d967264874a190a6f102d87575);
+        
+    
+        var popup_49dd73cf30da4f1e1ee14e5024a1e478 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_e80799a14104bc7d63b27c4f1baf2568 = $(`<div id="html_e80799a14104bc7d63b27c4f1baf2568" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE 'DINA GALLI'</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA DINA GALLI 3, 00139, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 60105705 - 06 60105706                               <li style='list-style-type: square'><b>Email/sito</b>: consultori.3ds@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00-13:00/14:00-17:00                           </p>                             </div>`)[0];
+                popup_49dd73cf30da4f1e1ee14e5024a1e478.setContent(html_e80799a14104bc7d63b27c4f1baf2568);
+            
+        
+
+        marker_220b97da2e0e787255e3f87585e7e0f0.bindPopup(popup_49dd73cf30da4f1e1ee14e5024a1e478)
+        ;
+
+        
+    
+    
+            var marker_8fde740e61f81c5466ac6c5f6fda24fe = L.marker(
+                [41.94649875, 12.5498265],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_e6f7f0e00e2dfb61428c65c44c512af3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8fde740e61f81c5466ac6c5f6fda24fe.setIcon(icon_e6f7f0e00e2dfb61428c65c44c512af3);
+        
+    
+        var popup_e8a0bdb9e8484fdaff3fef7478071db8 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_4fea92c4946722f26055e93e7be29c52 = $(`<div id="html_4fea92c4946722f26055e93e7be29c52" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE 'ROVANI'</h4>                           <i>ROMA 1</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: LARGO ROVANI, 5, 00137, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 77304805                               <li style='list-style-type: square'><b>Email/sito</b>: consultori.3ds@aslroma1.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-18:00                           </p>                             </div>`)[0];
+                popup_e8a0bdb9e8484fdaff3fef7478071db8.setContent(html_4fea92c4946722f26055e93e7be29c52);
+            
+        
+
+        marker_8fde740e61f81c5466ac6c5f6fda24fe.bindPopup(popup_e8a0bdb9e8484fdaff3fef7478071db8)
+        ;
+
+        
+    
+    
+            var marker_428409f5ddd86d780c6d60d607c9f30c = L.marker(
+                [41.8872868, 12.534669488746891],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_e020aebca314e26cca8d45d21c0c3878 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_428409f5ddd86d780c6d60d607c9f30c.setIcon(icon_e020aebca314e26cca8d45d21c0c3878);
+        
+    
+        var popup_05a5f0277468270599d3e43447b97238 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_b83ded3137ca0230306fb3aeb217d987 = $(`<div id="html_b83ded3137ca0230306fb3aeb217d987" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE'CONDOTTIERI' D5</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: P.ZZA DEI CONDOTTIERI 34, 00176, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 51008553                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00 - Lun e Mer 14:00-17:30                           </p>                             </div>`)[0];
+                popup_05a5f0277468270599d3e43447b97238.setContent(html_b83ded3137ca0230306fb3aeb217d987);
+            
+        
+
+        marker_428409f5ddd86d780c6d60d607c9f30c.bindPopup(popup_05a5f0277468270599d3e43447b97238)
+        ;
+
+        
+    
+    
+            var marker_81061f3e3f83d713421daa4592c0b669 = L.marker(
+                [41.89996971353231, 12.559897904448263],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_49f9f4d67812d222cc7980adee7900ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_81061f3e3f83d713421daa4592c0b669.setIcon(icon_49f9f4d67812d222cc7980adee7900ae);
+        
+    
+        var popup_b6700b9e723f7c5e46477d8af3b41e9a = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_201a77d0f6689cef5a5618bc7fcd31e3 = $(`<div id="html_201a77d0f6689cef5a5618bc7fcd31e3" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE'SPENCER' D5</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA HERBERT SPENCER 282, 00177, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 51008804-8795                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00, Mar e Gio 14:00-17:30                           </p>                             </div>`)[0];
+                popup_b6700b9e723f7c5e46477d8af3b41e9a.setContent(html_201a77d0f6689cef5a5618bc7fcd31e3);
+            
+        
+
+        marker_81061f3e3f83d713421daa4592c0b669.bindPopup(popup_b6700b9e723f7c5e46477d8af3b41e9a)
+        ;
+
+        
+    
+    
+            var marker_0ada001328d1db7e2f5af22e3952b85c = L.marker(
+                [41.88575925, 12.515035051812907],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_1a5cf8ed800369523997dceff46bb0cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0ada001328d1db7e2f5af22e3952b85c.setIcon(icon_1a5cf8ed800369523997dceff46bb0cb);
+        
+    
+        var popup_e3e1a0fd9898712df539b0dc522573c8 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_adeaf8e2525b17d8a08538c12fe66a9c = $(`<div id="html_adeaf8e2525b17d8a08538c12fe66a9c" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE MONZA D7</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA MONZA 2, 00182, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 51006518                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00, Mar e Gio 14:00-17:30                           </p>                             </div>`)[0];
+                popup_e3e1a0fd9898712df539b0dc522573c8.setContent(html_adeaf8e2525b17d8a08538c12fe66a9c);
+            
+        
+
+        marker_0ada001328d1db7e2f5af22e3952b85c.bindPopup(popup_e3e1a0fd9898712df539b0dc522573c8)
+        ;
+
+        
+    
+    
+            var marker_2546f11284244442d8a94ebdb833cf99 = L.marker(
+                [41.879599963474206, 12.504602184227194],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_b889796e9c1c5a6eb365821c01af4670 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2546f11284244442d8a94ebdb833cf99.setIcon(icon_b889796e9c1c5a6eb365821c01af4670);
+        
+    
+        var popup_a1d5a147f136973ade7ece9299135a8e = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_487cd00993f0405d7c344cc5d5f1a8cc = $(`<div id="html_487cd00993f0405d7c344cc5d5f1a8cc" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE IBERIA  D7</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA IBERIA, 73, 00183, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 51008580                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00, Mar e Gio 14:00-17:30                           </p>                             </div>`)[0];
+                popup_a1d5a147f136973ade7ece9299135a8e.setContent(html_487cd00993f0405d7c344cc5d5f1a8cc);
+            
+        
+
+        marker_2546f11284244442d8a94ebdb833cf99.bindPopup(popup_a1d5a147f136973ade7ece9299135a8e)
+        ;
+
+        
+    
+    
+            var marker_e6694e9799239db19c9ed360462cc75e = L.marker(
+                [41.87108990669097, 12.524676075148255],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_50b0e66ef267bf0db41859bf1677d9d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e6694e9799239db19c9ed360462cc75e.setIcon(icon_50b0e66ef267bf0db41859bf1677d9d2);
+        
+    
+        var popup_4ffa13988e5fc09caf197e02eb157f3b = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_9ebc0d73cf38013adf18e0d59211a597 = $(`<div id="html_9ebc0d73cf38013adf18e0d59211a597" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE DENINA D7</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA CARLO DENINA 7, 00179, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 51008571- call center vaccinazioni 0-12 mesi 0651006665                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00, Mar e Gio 14:00-17:30                           </p>                             </div>`)[0];
+                popup_4ffa13988e5fc09caf197e02eb157f3b.setContent(html_9ebc0d73cf38013adf18e0d59211a597);
+            
+        
+
+        marker_e6694e9799239db19c9ed360462cc75e.bindPopup(popup_4ffa13988e5fc09caf197e02eb157f3b)
+        ;
+
+        
+    
+    
+            var marker_2ac86b1f44d490d9f3aa5571e3a0761f = L.marker(
+                [41.8607145, 12.4872341],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_196b46dcfe435abaa2487d85c1faa7b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2ac86b1f44d490d9f3aa5571e3a0761f.setIcon(icon_196b46dcfe435abaa2487d85c1faa7b3);
+        
+    
+        var popup_0d1cfc5710b72f48a5a200459db282ee = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ab1472afb21f642fff997defb4df5f7d = $(`<div id="html_ab1472afb21f642fff997defb4df5f7d" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE SETTE CHIESE D8</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: LARGO SETTE CHIESE,25, 00145, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 51008896                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00, Lun e Gio 14:00-17:30                           </p>                             </div>`)[0];
+                popup_0d1cfc5710b72f48a5a200459db282ee.setContent(html_ab1472afb21f642fff997defb4df5f7d);
+            
+        
+
+        marker_2ac86b1f44d490d9f3aa5571e3a0761f.bindPopup(popup_0d1cfc5710b72f48a5a200459db282ee)
+        ;
+
+        
+    
+    
+            var marker_4a69201231b9a2bc8c447ac421025b18 = L.marker(
+                [41.8541839, 12.4953608],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_a2e40590063a24c2c8dce75314ea202b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4a69201231b9a2bc8c447ac421025b18.setIcon(icon_a2e40590063a24c2c8dce75314ea202b);
+        
+    
+        var popup_6fc913d4cbe2fa67c83a7155b9ea223b = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_30c79b5f40e9da8d785b286f2940ccd9 = $(`<div id="html_30c79b5f40e9da8d785b286f2940ccd9" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE VIA DEI LINCEI 93 D8</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA DEI LINCEI 93, 00147, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 51008646                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00, Lun e Mer 14:00-17:30                           </p>                             </div>`)[0];
+                popup_6fc913d4cbe2fa67c83a7155b9ea223b.setContent(html_30c79b5f40e9da8d785b286f2940ccd9);
+            
+        
+
+        marker_4a69201231b9a2bc8c447ac421025b18.bindPopup(popup_6fc913d4cbe2fa67c83a7155b9ea223b)
+        ;
+
+        
+    
+    
+            var marker_09fba288a9e26fea7c5b3e8c8976d6fa = L.marker(
+                [41.78804839475065, 12.441842995093022],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_94e795de57d012972a0e0db1a64daa0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_09fba288a9e26fea7c5b3e8c8976d6fa.setIcon(icon_94e795de57d012972a0e0db1a64daa0a);
+        
+    
+        var popup_3531ca5e5d095baa954765b2c3792515 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_2e552ba8a3d5f964c62d5bb7b8b718bb = $(`<div id="html_2e552ba8a3d5f964c62d5bb7b8b718bb" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE STAME D9</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA NICOLA STAME, 162, 00128, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 51007400                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00, Mar e Gio 14:00-17:30                           </p>                             </div>`)[0];
+                popup_3531ca5e5d095baa954765b2c3792515.setContent(html_2e552ba8a3d5f964c62d5bb7b8b718bb);
+            
+        
+
+        marker_09fba288a9e26fea7c5b3e8c8976d6fa.bindPopup(popup_3531ca5e5d095baa954765b2c3792515)
+        ;
+
+        
+    
+    
+            var marker_f890824e88dd13cf41ce825953446b9c = L.marker(
+                [41.95485643882271, 12.665558352331844],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_f6768f11a8d240db5d7c36f3eb4d7350 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f890824e88dd13cf41ce825953446b9c.setIcon(icon_f6768f11a8d240db5d7c36f3eb4d7350);
+        
+    
+        var popup_2d95b6727745ab9817d683153ac539e8 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_f98876cc900b658f689bd69e7f460abd = $(`<div id="html_f98876cc900b658f689bd69e7f460abd" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE SILONE D9</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA IGNAZIO SILONE 100, 00143, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 51008322                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00, Mar e Mer 14:00-17:30                           </p>                             </div>`)[0];
+                popup_2d95b6727745ab9817d683153ac539e8.setContent(html_f98876cc900b658f689bd69e7f460abd);
+            
+        
+
+        marker_f890824e88dd13cf41ce825953446b9c.bindPopup(popup_2d95b6727745ab9817d683153ac539e8)
+        ;
+
+        
+    
+    
+            var marker_00b2b20f8959a970ba18e234d7a26900 = L.marker(
+                [41.94302084932313, 12.58488521571637],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_4afe0c8c309c3767327be485ef98c5c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_00b2b20f8959a970ba18e234d7a26900.setIcon(icon_4afe0c8c309c3767327be485ef98c5c3);
+        
+    
+        var popup_121074cd1e902cb91518198deeb432aa = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_519f2147779972253478e8e8793a42c6 = $(`<div id="html_519f2147779972253478e8e8793a42c6" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE S. BENEDETTO</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: via S.Benedetto del tronto 9, 00156, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 41436327-6334                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00, Mar e Gio 14:00-17:30                           </p>                             </div>`)[0];
+                popup_121074cd1e902cb91518198deeb432aa.setContent(html_519f2147779972253478e8e8793a42c6);
+            
+        
+
+        marker_00b2b20f8959a970ba18e234d7a26900.bindPopup(popup_121074cd1e902cb91518198deeb432aa)
+        ;
+
+        
+    
+    
+            var marker_681450b7ebc14f34c95f7dbb8fd228fc = L.marker(
+                [41.9054437, 12.5894856],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_cb574741e5ad794eb93f094ef581411e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_681450b7ebc14f34c95f7dbb8fd228fc.setIcon(icon_cb574741e5ad794eb93f094ef581411e);
+        
+    
+        var popup_3de2472ff2f5775ddb2227d96fbb6e9e = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_855bee88059ae248de9a974ad41efe6d = $(`<div id="html_855bee88059ae248de9a974ad41efe6d" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE TOR CERVARA</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: via Tor Cervara,307, 00155, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 41436236                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00, Mar e Mer 14:00-17:30                           </p>                             </div>`)[0];
+                popup_3de2472ff2f5775ddb2227d96fbb6e9e.setContent(html_855bee88059ae248de9a974ad41efe6d);
+            
+        
+
+        marker_681450b7ebc14f34c95f7dbb8fd228fc.bindPopup(popup_3de2472ff2f5775ddb2227d96fbb6e9e)
+        ;
+
+        
+    
+    
+            var marker_9bdb710d24d39631d74c2e3783064df6 = L.marker(
+                [41.94007230809005, 12.623113423229078],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_0076cd481678c06ca1815db3802b355e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9bdb710d24d39631d74c2e3783064df6.setIcon(icon_0076cd481678c06ca1815db3802b355e);
+        
+    
+        var popup_87fa4ca37da1d671c7733b094213f8a2 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_831eb8331ee05975aeadd59d5defc289 = $(`<div id="html_831eb8331ee05975aeadd59d5defc289" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE SETTECAMINI</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: via Rubellia,2, 00131, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 41436090                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00                           </p>                             </div>`)[0];
+                popup_87fa4ca37da1d671c7733b094213f8a2.setContent(html_831eb8331ee05975aeadd59d5defc289);
+            
+        
+
+        marker_9bdb710d24d39631d74c2e3783064df6.bindPopup(popup_87fa4ca37da1d671c7733b094213f8a2)
+        ;
+
+        
+    
+    
+            var marker_61acd7603604495f0c75eecae9efbf28 = L.marker(
+                [41.91449647213262, 12.554883678366878],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_eab169a332c511979019513096dae817 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_61acd7603604495f0c75eecae9efbf28.setIcon(icon_eab169a332c511979019513096dae817);
+        
+    
+        var popup_f40ba7da7ccf1a18243424252a662e99 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_a465cbddfb6425350ed5caa2e6ca0941 = $(`<div id="html_a465cbddfb6425350ed5caa2e6ca0941" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE PIETRALATA</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: Via di Pietralata,497, 00158, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 41435408 - 5400                               <li style='list-style-type: square'><b>Email/sito</b>: direzione.uoctsdee@aslroma2.it percorso.nascita@aslroma2.it consultorio.donna@aslroma2.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00/14:00-17:30                           </p>                             </div>`)[0];
+                popup_f40ba7da7ccf1a18243424252a662e99.setContent(html_a465cbddfb6425350ed5caa2e6ca0941);
+            
+        
+
+        marker_61acd7603604495f0c75eecae9efbf28.bindPopup(popup_f40ba7da7ccf1a18243424252a662e99)
+        ;
+
+        
+    
+    
+            var marker_f99465efdfde6f276b44723faa1a4374 = L.marker(
+                [41.8926421, 12.5768513],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_056d1bbf85124cc9db03e9077fedf462 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f99465efdfde6f276b44723faa1a4374.setIcon(icon_056d1bbf85124cc9db03e9077fedf462);
+        
+    
+        var popup_a813d720290cd70da05df6658b547ff4 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_e4b5df41d44a492b6aec110644441da1 = $(`<div id="html_e4b5df41d44a492b6aec110644441da1" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE  MANFREDONIA</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: via Manfredonia,43, 00171, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 41436459                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00 Mar e Gio 14:00-17:30                           </p>                             </div>`)[0];
+                popup_a813d720290cd70da05df6658b547ff4.setContent(html_e4b5df41d44a492b6aec110644441da1);
+            
+        
+
+        marker_f99465efdfde6f276b44723faa1a4374.bindPopup(popup_a813d720290cd70da05df6658b547ff4)
+        ;
+
+        
+    
+    
+            var marker_ec5a3e39cf80bcecf627e916f4184084 = L.marker(
+                [41.86835164901318, 12.601596566908777],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_1c3d1d234159b167da9233ebdf242586 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ec5a3e39cf80bcecf627e916f4184084.setIcon(icon_1c3d1d234159b167da9233ebdf242586);
+        
+    
+        var popup_458a8a8ec7290d8adcb7651f45ccfe0e = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_89ce38ee384fc6ef6637eca5043136e0 = $(`<div id="html_89ce38ee384fc6ef6637eca5043136e0" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE CANAPIGLIE</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: via delle Canapiglie,88, 00132, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 41436125-6120                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00 - Lun e Mar 14:00-17:30                           </p>                             </div>`)[0];
+                popup_458a8a8ec7290d8adcb7651f45ccfe0e.setContent(html_89ce38ee384fc6ef6637eca5043136e0);
+            
+        
+
+        marker_ec5a3e39cf80bcecf627e916f4184084.bindPopup(popup_458a8a8ec7290d8adcb7651f45ccfe0e)
+        ;
+
+        
+    
+    
+            var marker_d002cab9023b6c741776cd7e7356132e = L.marker(
+                [41.8634352, 12.546376777230044],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_7ca39648f2208018491ebf16207f7adb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d002cab9023b6c741776cd7e7356132e.setIcon(icon_7ca39648f2208018491ebf16207f7adb);
+        
+    
+        var popup_f1ff435921a7e321dd389c706262ed4d = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_8404ae74b5d8c77a330546a7d49851d7 = $(`<div id="html_8404ae74b5d8c77a330546a7d49851d7" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE LEVII</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: via dei Levii,10, 00174, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 41435102                               <li style='list-style-type: square'><b>Email/sito</b>: <a href="https://www.aslroma2.it/index.php/servizi-on-line-cittadini" target="_blank">www.aslroma2.it/index.php/servizi-on-line-cittadini</a>                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:30-13:00 - Lun e Mer  14:00-17:30                           </p>                             </div>`)[0];
+                popup_f1ff435921a7e321dd389c706262ed4d.setContent(html_8404ae74b5d8c77a330546a7d49851d7);
+            
+        
+
+        marker_d002cab9023b6c741776cd7e7356132e.bindPopup(popup_f1ff435921a7e321dd389c706262ed4d)
+        ;
+
+        
+    
+    
+            var marker_c6ad7dbf0af154fce975b98a1be9d406 = L.marker(
+                [41.813995709261185, 12.617067652254848],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_10142d26a27b901bac88559c404de647 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c6ad7dbf0af154fce975b98a1be9d406.setIcon(icon_10142d26a27b901bac88559c404de647);
+        
+    
+        var popup_224fd76e346ffe930267916b0e50f53e = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_8bf6821f672436bd673cbc3d904bb1f9 = $(`<div id="html_8bf6821f672436bd673cbc3d904bb1f9" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE STAZIONE DI CIAMPINO</h4>                           <i>ROMA 2</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: via della stazione di ciampino,41, 00118, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 932724132                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun, Gio, Ven 8:30–13:00; Mar, Mer 8:00-16:30                           </p>                             </div>`)[0];
+                popup_224fd76e346ffe930267916b0e50f53e.setContent(html_8bf6821f672436bd673cbc3d904bb1f9);
+            
+        
+
+        marker_c6ad7dbf0af154fce975b98a1be9d406.bindPopup(popup_224fd76e346ffe930267916b0e50f53e)
+        ;
+
+        
+    
+    
+            var marker_34c01c32abc3ae56e9c1d7bfd9b42416 = L.marker(
+                [41.76267918630667, 12.229215603612937],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_ab7379d4ebcd593b09f7aa1322d9950b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_34c01c32abc3ae56e9c1d7bfd9b42416.setIcon(icon_ab7379d4ebcd593b09f7aa1322d9950b);
+        
+    
+        var popup_aa8c048a02bb374bcdead69261c31128 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_3140d2c38bc480662f006849cb97fda6 = $(`<div id="html_3140d2c38bc480662f006849cb97fda6" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO  FAMILIARE FIUMICINO</h4>                           <i>ROMA 3</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA GIORGIO GIORGIS, 56, 00054, FIUMICINO                               <li style='list-style-type: square'><b>Telefono</b>: 06 56484750                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.fiumicino@aslroma3.it                           </ul>                           <p>Orari apertura: <br>                           lun-ven 08:00-14:00; lun-gio 14:30-17:30                           </p>                             </div>`)[0];
+                popup_aa8c048a02bb374bcdead69261c31128.setContent(html_3140d2c38bc480662f006849cb97fda6);
+            
+        
+
+        marker_34c01c32abc3ae56e9c1d7bfd9b42416.bindPopup(popup_aa8c048a02bb374bcdead69261c31128)
+        ;
+
+        
+    
+    
+            var marker_25cd7a50279738839c8edefdb4e78f37 = L.marker(
+                [41.87686742031169, 12.424981004519823],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_9bbc5fd1eaa390084fe127d64339fef2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_25cd7a50279738839c8edefdb4e78f37.setIcon(icon_9bbc5fd1eaa390084fe127d64339fef2);
+        
+    
+        var popup_7cd123ce06ea4b6b5d499349f38083be = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ed5672c2f56966f6ce3036f09fa11160 = $(`<div id="html_ed5672c2f56966f6ce3036f09fa11160" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE BRAVETTA</h4>                           <i>ROMA 3</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA DELLA CONSOLATA 52, 00164, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 56486536                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.bravetta@aslroma3.it                           </ul>                           <p>Orari apertura: <br>                           lun-ven 08:00-14:00; mart-gio 14:30-17:30                           </p>                             </div>`)[0];
+                popup_7cd123ce06ea4b6b5d499349f38083be.setContent(html_ed5672c2f56966f6ce3036f09fa11160);
+            
+        
+
+        marker_25cd7a50279738839c8edefdb4e78f37.bindPopup(popup_7cd123ce06ea4b6b5d499349f38083be)
+        ;
+
+        
+    
+    
+            var marker_a4f4a3b5ac4982d8357b78d98a5ac1e7 = L.marker(
+                [41.870443449999996, 12.407765608300814],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_6b6534936235818683f326002cb5eabc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a4f4a3b5ac4982d8357b78d98a5ac1e7.setIcon(icon_6b6534936235818683f326002cb5eabc);
+        
+    
+        var popup_31899d0f57dfb5f4a6d937549ab8f349 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_b391bf98571c20ae5fbc30a3a64cbe81 = $(`<div id="html_b391bf98571c20ae5fbc30a3a64cbe81" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE COLLE MASSIMO</h4>                           <i>ROMA 3</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: LARGO  LUDOVICO QUARONI, N. 4, 00153, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 56486688                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.massimo@aslroma3.it                           </ul>                           <p>Orari apertura: <br>                           lun-ven 08:00-14:00; gio 14:30-17:30                           </p>                             </div>`)[0];
+                popup_31899d0f57dfb5f4a6d937549ab8f349.setContent(html_b391bf98571c20ae5fbc30a3a64cbe81);
+            
+        
+
+        marker_a4f4a3b5ac4982d8357b78d98a5ac1e7.bindPopup(popup_31899d0f57dfb5f4a6d937549ab8f349)
+        ;
+
+        
+    
+    
+            var marker_d4361de33b08a01ba9f18614211aa1c7 = L.marker(
+                [41.84470195044805, 12.461485800166875],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_2add2d124f4092a02fd200b5ce7d1eb6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d4361de33b08a01ba9f18614211aa1c7.setIcon(icon_2add2d124f4092a02fd200b5ce7d1eb6);
+        
+    
+        var popup_a8cadd0c09b6d91f4e7fb4436d20c3f9 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_102afd718d2d39d3c7cf11eab1f4145e = $(`<div id="html_102afd718d2d39d3c7cf11eab1f4145e" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE MAGLIANA</h4>                           <i>ROMA 3</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: Via Vaiano, 53, 00147, ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 56485510                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.magliana@aslroma3.it                           </ul>                           <p>Orari apertura: <br>                           lun-ven 08:00-14:00; mar-gio 14:30-17:30                           </p>                             </div>`)[0];
+                popup_a8cadd0c09b6d91f4e7fb4436d20c3f9.setContent(html_102afd718d2d39d3c7cf11eab1f4145e);
+            
+        
+
+        marker_d4361de33b08a01ba9f18614211aa1c7.bindPopup(popup_a8cadd0c09b6d91f4e7fb4436d20c3f9)
+        ;
+
+        
+    
+    
+            var marker_dfb6a60f6bf492dc298113c7bd060de3 = L.marker(
+                [42.099014959227716, 11.809921879141871],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_491457b22c58ebb27125f55322c7ec66 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_dfb6a60f6bf492dc298113c7bd060de3.setIcon(icon_491457b22c58ebb27125f55322c7ec66);
+        
+    
+        var popup_df1dd6162515c3da5185ba41610856a6 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_2e1771ad445616b8b9e564c63139fbb1 = $(`<div id="html_2e1771ad445616b8b9e564c63139fbb1" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE CIVITAVECCHIA</h4>                           <i>ROMA 4</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: Largo Donatori del Sangue, 00053, CIVITAVECCHIA                               <li style='list-style-type: square'><b>Telefono</b>: 06 96669994-995- 997-998                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun 9:00–14.00; Mar 9:00–17:00; Mer 9:00–17:00; Gio 9:00–14:00; Ven 9:00-13:00                           </p>                             </div>`)[0];
+                popup_df1dd6162515c3da5185ba41610856a6.setContent(html_2e1771ad445616b8b9e564c63139fbb1);
+            
+        
+
+        marker_dfb6a60f6bf492dc298113c7bd060de3.bindPopup(popup_df1dd6162515c3da5185ba41610856a6)
+        ;
+
+        
+    
+    
+            var marker_7560b92668ec43afb5144e9e39852720 = L.marker(
+                [42.0424807, 11.8731467],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_1c935d2fa41102748e10ea923fa9a3da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_7560b92668ec43afb5144e9e39852720.setIcon(icon_1c935d2fa41102748e10ea923fa9a3da);
+        
+    
+        var popup_1d98cf0bbdc559a55281b0f94f9e3be7 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_407acb40130230449ca93f76629f2dd2 = $(`<div id="html_407acb40130230449ca93f76629f2dd2" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE S. MARINELLA</h4>                           <i>ROMA 4</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA VALDAMBRINI, 115, 00058, SANTA MARINELLA                               <li style='list-style-type: square'><b>Telefono</b>: n/d                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           n/d                           </p>                             </div>`)[0];
+                popup_1d98cf0bbdc559a55281b0f94f9e3be7.setContent(html_407acb40130230449ca93f76629f2dd2);
+            
+        
+
+        marker_7560b92668ec43afb5144e9e39852720.bindPopup(popup_1d98cf0bbdc559a55281b0f94f9e3be7)
+        ;
+
+        
+    
+    
+            var marker_387ff0175fea21d34aeb99c906f4726e = L.marker(
+                [41.99306290948942, 12.088883644816594],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_3bafae969c6dbfb8580e5e5c0731f974 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_387ff0175fea21d34aeb99c906f4726e.setIcon(icon_3bafae969c6dbfb8580e5e5c0731f974);
+        
+    
+        var popup_7948d37312cfe38fd29a54449f63f1e1 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_2b95d910c518a8ace735b48c3b845b68 = $(`<div id="html_2b95d910c518a8ace735b48c3b845b68" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE CERVETERI</h4>                           <i>ROMA 4</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA MARTIRI DELLE FOIBE, 95, 00052, CERVETERI                               <li style='list-style-type: square'><b>Telefono</b>: 06 96669231-322-323-324-312                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun 9:00–14:00; Mar 9:00–17:00; Mer 9:00–16:30; Gio 9:00–16:30; Ven 9:00-13:00                           </p>                             </div>`)[0];
+                popup_7948d37312cfe38fd29a54449f63f1e1.setContent(html_2b95d910c518a8ace735b48c3b845b68);
+            
+        
+
+        marker_387ff0175fea21d34aeb99c906f4726e.bindPopup(popup_7948d37312cfe38fd29a54449f63f1e1)
+        ;
+
+        
+    
+    
+            var marker_93156d42102178635a452eb7dd025f12 = L.marker(
+                [42.1282801, 12.130544050000001],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_9cab583d731f427add38ae067e9d1347 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_93156d42102178635a452eb7dd025f12.setIcon(icon_9cab583d731f427add38ae067e9d1347);
+        
+    
+        var popup_6162668f1a5a6edfa28f948ee281f220 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_02516cd3c8ccd3800493f02f72ea3f9c = $(`<div id="html_02516cd3c8ccd3800493f02f72ea3f9c" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE MANZIANA</h4>                           <i>ROMA 4</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: P.ZZA VITTORIO VENETO, 3, 00066, MANZIANA                               <li style='list-style-type: square'><b>Telefono</b>: n/d                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           n/d                           </p>                             </div>`)[0];
+                popup_6162668f1a5a6edfa28f948ee281f220.setContent(html_02516cd3c8ccd3800493f02f72ea3f9c);
+            
+        
+
+        marker_93156d42102178635a452eb7dd025f12.bindPopup(popup_6162668f1a5a6edfa28f948ee281f220)
+        ;
+
+        
+    
+    
+            var marker_bdf87b2f435601c7eb2f07f2ead13342 = L.marker(
+                [42.1022958, 12.177438687250996],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_fe723f8b1b0aaa7c7399992f87911a4a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_bdf87b2f435601c7eb2f07f2ead13342.setIcon(icon_fe723f8b1b0aaa7c7399992f87911a4a);
+        
+    
+        var popup_4612f952b8e3b245651e2ccaa3235174 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ef8293582bdb350537823b918f8c6adb = $(`<div id="html_ef8293582bdb350537823b918f8c6adb" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE BRACCIANO</h4>                           <i>ROMA 4</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: LARGO DELL'OSPEDALE VECCHIO N.8, 00062, BRACCIANO                               <li style='list-style-type: square'><b>Telefono</b>: 06 96669121-123-124                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun 8:30–17:00; Mar 8:30–17:30; Mer 8:30–17:30; Gio 8:30–15:00; Ven 8:30-15:00                           </p>                             </div>`)[0];
+                popup_4612f952b8e3b245651e2ccaa3235174.setContent(html_ef8293582bdb350537823b918f8c6adb);
+            
+        
+
+        marker_bdf87b2f435601c7eb2f07f2ead13342.bindPopup(popup_4612f952b8e3b245651e2ccaa3235174)
+        ;
+
+        
+    
+    
+            var marker_15c47c0748e2c44167ed3812e555ee88 = L.marker(
+                [42.13821909196091, 12.381548375120703],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_30766c6e728e6af75042e5cbda4e7ea7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_15c47c0748e2c44167ed3812e555ee88.setIcon(icon_30766c6e728e6af75042e5cbda4e7ea7);
+        
+    
+        var popup_ac214253d0a025399e0d65eb4adfcff6 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_8c7af16c510de0034290a2d1de00b54b = $(`<div id="html_8c7af16c510de0034290a2d1de00b54b" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE CAMPAGNANO</h4>                           <i>ROMA 4</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA ADRIANO I°, 23, 00063, CAMPAGNANO DI ROMA                               <li style='list-style-type: square'><b>Telefono</b>: 06 96669291-294-239                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun 10:00–15:00; Mar 8:30–18:30; Mer 8:30–16:00; Gio 8:30–17:00; Ven 10:00-16:00                           </p>                             </div>`)[0];
+                popup_ac214253d0a025399e0d65eb4adfcff6.setContent(html_8c7af16c510de0034290a2d1de00b54b);
+            
+        
+
+        marker_15c47c0748e2c44167ed3812e555ee88.bindPopup(popup_ac214253d0a025399e0d65eb4adfcff6)
+        ;
+
+        
+    
+    
+            var marker_02248e73442a91319ee52cde10a1660a = L.marker(
+                [42.05964936210088, 12.5942147453025],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_24c300de3226e4fb7798e0c05574d07a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_02248e73442a91319ee52cde10a1660a.setIcon(icon_24c300de3226e4fb7798e0c05574d07a);
+        
+    
+        var popup_fc9eb1a5d074c69145a106a6fd937a8b = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_15432179e21352652fd89f5bb857d633 = $(`<div id="html_15432179e21352652fd89f5bb857d633" style="width: 100.0%; height: 100.0%;">                           <h4>DISTRETTO DI MONTEROTONDO CON CONSULTORIO E CSM</h4>                           <i>ROMA 5</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA DELL'AERONAUTICA, 53/b, 00015, MONTEROTONDO                               <li style='list-style-type: square'><b>Telefono</b>: 0774 3165514                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.monterotondo@aslroma5.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00–13:00; Gio 8:00–17:00                           </p>                             </div>`)[0];
+                popup_fc9eb1a5d074c69145a106a6fd937a8b.setContent(html_15432179e21352652fd89f5bb857d633);
+            
+        
+
+        marker_02248e73442a91319ee52cde10a1660a.bindPopup(popup_fc9eb1a5d074c69145a106a6fd937a8b)
+        ;
+
+        
+    
+    
+            var marker_f8e52efa20563573244c34d58557ac7b = L.marker(
+                [41.99595822644862, 12.618732566678583],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_614c2b4706c847ca668bb095ce61fb4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_f8e52efa20563573244c34d58557ac7b.setIcon(icon_614c2b4706c847ca668bb095ce61fb4e);
+        
+    
+        var popup_f70d3927feb4b951cf82c47a578f5274 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_602469a4cd36b78f2d38c9553cab2d7e = $(`<div id="html_602469a4cd36b78f2d38c9553cab2d7e" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE FONTE NUOVA</h4>                           <i>ROMA 5</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: Via IV Novembre, 2, 00013, FONTE NUOVA                               <li style='list-style-type: square'><b>Telefono</b>: n/d                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           n/d                           </p>                             </div>`)[0];
+                popup_f70d3927feb4b951cf82c47a578f5274.setContent(html_602469a4cd36b78f2d38c9553cab2d7e);
+            
+        
+
+        marker_f8e52efa20563573244c34d58557ac7b.bindPopup(popup_f70d3927feb4b951cf82c47a578f5274)
+        ;
+
+        
+    
+    
+            var marker_abe4cce0f69232fc9d27c4493dc08d01 = L.marker(
+                [41.954555015728374, 12.700753694962513],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_f6094747803676d540e6e5683d96cbc4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_abe4cce0f69232fc9d27c4493dc08d01.setIcon(icon_f6094747803676d540e6e5683d96cbc4);
+        
+    
+        var popup_994047e66dbd4d6026b1a2789b7178d9 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_3efff338ac1aedf382839387a6fc7048 = $(`<div id="html_3efff338ac1aedf382839387a6fc7048" style="width: 100.0%; height: 100.0%;">                           <h4>AMBULATORIO DISTRETTO GUIDONIA CON CONSULTORIO E TSMREE</h4>                           <i>ROMA 5</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: Via dei Castagni, 20/22, 00012, GUIDONIA MONTECELIO                               <li style='list-style-type: square'><b>Telefono</b>: 0774 77 91 04                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.guidonia@aslroma5.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Gio 8:00–17:30; Ven 8:30–12:30                           </p>                             </div>`)[0];
+                popup_994047e66dbd4d6026b1a2789b7178d9.setContent(html_3efff338ac1aedf382839387a6fc7048);
+            
+        
+
+        marker_abe4cce0f69232fc9d27c4493dc08d01.bindPopup(popup_994047e66dbd4d6026b1a2789b7178d9)
+        ;
+
+        
+    
+    
+            var marker_acb500b6d14c538f17543827d80686fd = L.marker(
+                [41.96498225, 12.80091887117848],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_f8f22b39b04e91e342b7bcca000782d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_acb500b6d14c538f17543827d80686fd.setIcon(icon_f8f22b39b04e91e342b7bcca000782d4);
+        
+    
+        var popup_a62e509a61cd3e8cd802287c630d5fed = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_42b57edac2c9ed4e8815c2a381d34374 = $(`<div id="html_42b57edac2c9ed4e8815c2a381d34374" style="width: 100.0%; height: 100.0%;">                           <h4>DISTRETTO DI TIVOLI CON CONSULTORIO E TSMREE</h4>                           <i>ROMA 5</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: PIAZZA MASSIMO, 1, 00019, TIVOLI                               <li style='list-style-type: square'><b>Telefono</b>: 0774 704708                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.tivoli@aslroma5.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00–13:00; Mar-Gio 14:00–18:00                           </p>                             </div>`)[0];
+                popup_a62e509a61cd3e8cd802287c630d5fed.setContent(html_42b57edac2c9ed4e8815c2a381d34374);
+            
+        
+
+        marker_acb500b6d14c538f17543827d80686fd.bindPopup(popup_a62e509a61cd3e8cd802287c630d5fed)
+        ;
+
+        
+    
+    
+            var marker_281a88cba225c04e6ffc7794c8e1d7a8 = L.marker(
+                [41.83895685, 12.888326371557913],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_e1dc521493afbc84010623974f89d80c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_281a88cba225c04e6ffc7794c8e1d7a8.setIcon(icon_e1dc521493afbc84010623974f89d80c);
+        
+    
+        var popup_d62a93cef3a50155c0a016f29d0b1389 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_57fe332e0c6f8d4f893db473d634b4ce = $(`<div id="html_57fe332e0c6f8d4f893db473d634b4ce" style="width: 100.0%; height: 100.0%;">                           <h4>DISTRETTO DI PALESTRINA CON CONSULTORIO E TSMREE</h4>                           <i>ROMA 5</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: PORTA SAN MARTINO 38, 00036, PALESTRINA                               <li style='list-style-type: square'><b>Telefono</b>: 06 95322621                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.palestrina@aslroma5.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00–13:00; Mar, Gio 8:00–17:30                           </p>                             </div>`)[0];
+                popup_d62a93cef3a50155c0a016f29d0b1389.setContent(html_57fe332e0c6f8d4f893db473d634b4ce);
+            
+        
+
+        marker_281a88cba225c04e6ffc7794c8e1d7a8.bindPopup(popup_d62a93cef3a50155c0a016f29d0b1389)
+        ;
+
+        
+    
+    
+            var marker_3cc86865784b08f8bab2394e33a14b7f = L.marker(
+                [41.60389613615839, 13.087197079254366],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_eecaba80d7d67efabf3a0f90ef850cc1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_3cc86865784b08f8bab2394e33a14b7f.setIcon(icon_eecaba80d7d67efabf3a0f90ef850cc1);
+        
+    
+        var popup_c32be93b68d3f7505aaf178a637bd3cf = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_551da754e8888f38b6bf93b41685f02d = $(`<div id="html_551da754e8888f38b6bf93b41685f02d" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO CARPINETO</h4>                           <i>ROMA 5</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: Via Matteotti, 1, 00032, CARPINETO ROMANO                               <li style='list-style-type: square'><b>Telefono</b>: n/d                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           n/d                           </p>                             </div>`)[0];
+                popup_c32be93b68d3f7505aaf178a637bd3cf.setContent(html_551da754e8888f38b6bf93b41685f02d);
+            
+        
+
+        marker_3cc86865784b08f8bab2394e33a14b7f.bindPopup(popup_c32be93b68d3f7505aaf178a637bd3cf)
+        ;
+
+        
+    
+    
+            var marker_4b3e09703385f20fd637c5b81effbc74 = L.marker(
+                [41.7751867, 12.9209545],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_cb9f121be5f94ffe08abb802d9c811f6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_4b3e09703385f20fd637c5b81effbc74.setIcon(icon_cb9f121be5f94ffe08abb802d9c811f6);
+        
+    
+        var popup_2243327bdecb30058b25bdbc42272906 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_19143146b6716eafbf8115af97705b8a = $(`<div id="html_19143146b6716eafbf8115af97705b8a" style="width: 100.0%; height: 100.0%;">                           <h4>PRESIDIO VALMONTONE CON CONSULTORIO</h4>                           <i>ROMA 5</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: Via Porta Napoletana, 8, 00038, VALMONTONE                               <li style='list-style-type: square'><b>Telefono</b>: 0697223629/30                               <li style='list-style-type: square'><b>Email/sito</b>: consultorio.valmontone@aslroma5.it                           </ul>                           <p>Orari apertura: <br>                           Lun-Ven 8:00–15:30; Mar 8:00–17:30                           </p>                             </div>`)[0];
+                popup_2243327bdecb30058b25bdbc42272906.setContent(html_19143146b6716eafbf8115af97705b8a);
+            
+        
+
+        marker_4b3e09703385f20fd637c5b81effbc74.bindPopup(popup_2243327bdecb30058b25bdbc42272906)
+        ;
+
+        
+    
+    
+            var marker_1ced531bd69cc764da535a0daf636137 = L.marker(
+                [41.8088647, 12.68227405],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_fb058e25c2dc6b55155156e263d162ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_1ced531bd69cc764da535a0daf636137.setIcon(icon_fb058e25c2dc6b55155156e263d162ad);
+        
+    
+        var popup_3da0833fca26fff6cb74217f0b123a7b = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_8e8ce093dcf81de3676bb14141e920ec = $(`<div id="html_8e8ce093dcf81de3676bb14141e920ec" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE FRASCATI</h4>                           <i>ROMA 6</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA MATTEOTTI 59, 00044, FRASCATI                               <li style='list-style-type: square'><b>Telefono</b>: 06/932724132                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun, Gio, Ven 8:30–13:00; Mar,Mer 8:00-16:30                           </p>                             </div>`)[0];
+                popup_3da0833fca26fff6cb74217f0b123a7b.setContent(html_8e8ce093dcf81de3676bb14141e920ec);
+            
+        
+
+        marker_1ced531bd69cc764da535a0daf636137.bindPopup(popup_3da0833fca26fff6cb74217f0b123a7b)
+        ;
+
+        
+    
+    
+            var marker_f726fa53695e8b105b5877dcebd439e7 = L.marker(
+                [41.7875133, 12.6664039],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_45985c36475f561578f450564e62a097 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_f726fa53695e8b105b5877dcebd439e7.setIcon(icon_45985c36475f561578f450564e62a097);
+        
+    
+        var popup_3b0aee92bfcaeddc12213b001b8fc267 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_e61de0dcb76d57e6f1de388cc285f827 = $(`<div id="html_e61de0dcb76d57e6f1de388cc285f827" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE GROTTAFERRATA</h4>                           <i>ROMA 6</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: V.LE SAN NILO 4, 00046, GROTTAFERRATA                               <li style='list-style-type: square'><b>Telefono</b>: 06 932724133                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun, Gio, Ven 8:30–13:00; Mar,Mer 8:00-16:30                           </p>                             </div>`)[0];
+                popup_3b0aee92bfcaeddc12213b001b8fc267.setContent(html_e61de0dcb76d57e6f1de388cc285f827);
+            
+        
+
+        marker_f726fa53695e8b105b5877dcebd439e7.bindPopup(popup_3b0aee92bfcaeddc12213b001b8fc267)
+        ;
+
+        
+    
+    
+            var marker_2b56cec5d603fff513a5ca36d2b6ce8b = L.marker(
+                [41.69133145, 12.7887333],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_3395eb908f8f98fc5a3b8daf7db46761 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_2b56cec5d603fff513a5ca36d2b6ce8b.setIcon(icon_3395eb908f8f98fc5a3b8daf7db46761);
+        
+    
+        var popup_429b2943129655f62f9a179014b12a25 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_635872235d8da39234535c9cd48bc7cc = $(`<div id="html_635872235d8da39234535c9cd48bc7cc" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO  FAMILIARE VELLETRI</h4>                           <i>ROMA 6</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA SAN BIAGIO 19, 00049, VELLETRI                               <li style='list-style-type: square'><b>Telefono</b>: 06 93272433                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun, Gio, Ven 8:30–13:00; Mar,Mer 8:00-16:30                           </p>                             </div>`)[0];
+                popup_429b2943129655f62f9a179014b12a25.setContent(html_635872235d8da39234535c9cd48bc7cc);
+            
+        
+
+        marker_2b56cec5d603fff513a5ca36d2b6ce8b.bindPopup(popup_429b2943129655f62f9a179014b12a25)
+        ;
+
+        
+    
+    
+            var marker_611bfd4081c83be0ff1fe22008688749 = L.marker(
+                [41.6785931, 12.5018337],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_7c753acc1b710773b66f8e3dc61b24f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_611bfd4081c83be0ff1fe22008688749.setIcon(icon_7c753acc1b710773b66f8e3dc61b24f1);
+        
+    
+        var popup_c76eec7c61c0ba996bef05e92b53e774 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_08c476553715565742beb60539184fde = $(`<div id="html_08c476553715565742beb60539184fde" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARI POMEZIA</h4>                           <i>ROMA 6</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA CASTELLI ROMANI 2, 00040, POMEZIA                               <li style='list-style-type: square'><b>Telefono</b>: 06 93272433                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun, Gio, Ven 8:30–13:00; Mar, Mer 8:00-16:30                           </p>                             </div>`)[0];
+                popup_c76eec7c61c0ba996bef05e92b53e774.setContent(html_08c476553715565742beb60539184fde);
+            
+        
+
+        marker_611bfd4081c83be0ff1fe22008688749.bindPopup(popup_c76eec7c61c0ba996bef05e92b53e774)
+        ;
+
+        
+    
+    
+            var marker_57b20173ba7f80603d54b043e1494ca9 = L.marker(
+                [41.571709182626606, 12.524352013770212],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_de24fa39d5376aadba7b9ebf263db1eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_57b20173ba7f80603d54b043e1494ca9.setIcon(icon_de24fa39d5376aadba7b9ebf263db1eb);
+        
+    
+        var popup_f52763d6fe1436cb9539415db111ad9c = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_7a883ea32e717f4c4c080c7b77d9278c = $(`<div id="html_7a883ea32e717f4c4c080c7b77d9278c" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE ARDEA</h4>                           <i>ROMA 6</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: via dei tassi 18, 00040, ARDEA                               <li style='list-style-type: square'><b>Telefono</b>: 06 93272434                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun, Gio, Ven 8:00–13:30; Mar, Mer 8:00-16:30                           </p>                             </div>`)[0];
+                popup_f52763d6fe1436cb9539415db111ad9c.setContent(html_7a883ea32e717f4c4c080c7b77d9278c);
+            
+        
+
+        marker_57b20173ba7f80603d54b043e1494ca9.bindPopup(popup_f52763d6fe1436cb9539415db111ad9c)
+        ;
+
+        
+    
+    
+            var marker_59524c6100c783638c2fdc5620978b0b = L.marker(
+                [41.725573049882605, 12.610867410835835],
+                {}
+            ).addTo(map_fb5d6dce95bb46db489a7e4632bbc3c8);
+        
+    
+            var icon_103d53ecaa4f838cccb240aa067bdb08 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_59524c6100c783638c2fdc5620978b0b.setIcon(icon_103d53ecaa4f838cccb240aa067bdb08);
+        
+    
+        var popup_9e7b97b35fcad809da3879e49188aca3 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_280dc43ce1575c570b3ea12449e3ffd2 = $(`<div id="html_280dc43ce1575c570b3ea12449e3ffd2" style="width: 100.0%; height: 100.0%;">                           <h4>CONSULTORIO FAMILIARE PAVONA</h4>                           <i>ROMA 6</i>                           <br>                           <ul>                               <li style='list-style-type: square'><b>Indirizzo</b>: VIA BOLOGNA, 7  PAVONA(ALBANO), 00040, ALBANO LAZIALE                               <li style='list-style-type: square'><b>Telefono</b>: 06 93273352                               <li style='list-style-type: square'><b>Email/sito</b>: n/d                           </ul>                           <p>Orari apertura: <br>                           Lun, Gio, Ven 8:30–13:00; Mar, Mer 8:00-16:30                           </p>                             </div>`)[0];
+                popup_9e7b97b35fcad809da3879e49188aca3.setContent(html_280dc43ce1575c570b3ea12449e3ffd2);
+            
+        
+
+        marker_59524c6100c783638c2fdc5620978b0b.bindPopup(popup_9e7b97b35fcad809da3879e49188aca3)
+        ;
+
+        
+    
+</script>
+</html>
