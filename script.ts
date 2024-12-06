@@ -14,11 +14,11 @@ const languageData: LanguageData = {
         "Disclaimer",
         "The data used in this map is directly sourced from the Salute Lazio database. INTERSOS is not responsible for any lack of accuracy."
     ],
-    'it': [
+    'it-IT': [
         "Disclaimer",
         "I dati utilizzati in questa mappa sono direttamente presi dal database Salute Lazio. INTERSOS non è responsabile per eventuali imprecisioni."
     ],
-    'es': [
+    'es-ES': [
         "Aviso Legal",
         "Los datos utilizados en esta mapa provienen directamente de la base de datos de Salute Lazio. INTERSOS no se hace responsable de la falta de precisión."
     ],
@@ -45,13 +45,14 @@ const languageData: LanguageData = {
 };
 
 function getUserLanguage(): string {
-    return navigator.language || navigator.userLanguage
+    return navigator.userLanguage || navigator.language
 }
 
 function populateDialog(dialog: HTMLDialogElement): void {
     let language: string = getUserLanguage();
+    console.log(language)
     if (!(language in languageData)) {
-        language = 'ar'; // Fallback to default language
+        language = 'en-GB'; // Fallback to default language
     }
     let container = document.createElement('div');
     let dialogTitle: HTMLHeadingElement = document.createElement('h2');
