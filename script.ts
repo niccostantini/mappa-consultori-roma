@@ -45,14 +45,14 @@ const languageData: LanguageData = {
 };
 
 function getUserLanguage(): string {
-    if (!(navigator.language in languageData) || !(navigator.userLangue in languageData)) {
-        return 'en-GB'; // Fallback to default language
-    }
     return navigator.language || navigator.userLanguage
 }
 
 function populateDialog(dialog: HTMLDialogElement): void {
     let language: string = getUserLanguage();
+    if (!(language in languageData)) {
+        language = 'ar'; // Fallback to default language
+    }
     let container = document.createElement('div');
     let dialogTitle: HTMLHeadingElement = document.createElement('h2');
     let dialogText: HTMLParagraphElement = document.createElement('p');

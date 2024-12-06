@@ -42,13 +42,13 @@ const languageData = {
     ]
 };
 function getUserLanguage() {
-    if (!(navigator.language in languageData) || !(navigator.userLangue in languageData)) {
-        return 'en-GB'; // Fallback to default language
-    }
     return navigator.language || navigator.userLanguage;
 }
 function populateDialog(dialog) {
     let language = getUserLanguage();
+    if (!(language in languageData)) {
+        language = 'ar'; // Fallback to default language
+    }
     let container = document.createElement('div');
     let dialogTitle = document.createElement('h2');
     let dialogText = document.createElement('p');
