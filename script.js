@@ -42,7 +42,7 @@ const languageData = {
     ]
 };
 function getUserLanguage() {
-    return navigator.userLanguage || navigator.language;
+    return navigator.language;
 }
 function populateDialog(dialog) {
     let language = getUserLanguage();
@@ -55,9 +55,9 @@ function populateDialog(dialog) {
     let dialogText = document.createElement('p');
     dialogText.style.textAlign = (language === 'ar' || language === 'fa') ? 'right' : 'left';
     let dialogCloseButton = document.createElement('button');
+    dialogCloseButton.textContent = "OK";
     dialogTitle.textContent = languageData[language][0];
     dialogText.textContent = languageData[language][1];
-    dialogCloseButton.textContent = "OK";
     dialog.appendChild(container);
     container.appendChild(dialogTitle);
     container.appendChild(dialogText);
