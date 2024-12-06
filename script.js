@@ -42,7 +42,7 @@ const languageData = {
     ]
 };
 function getUserLanguage() {
-    if (!(navigator.language in languageData) || navigator.userLangue in languageData) {
+    if (!(navigator.language in languageData) || !(navigator.userLangue in languageData)) {
         return 'en-GB'; // Fallback to default language
     }
     return navigator.language || navigator.userLanguage;
