@@ -1,7 +1,0 @@
-# Ignore all files
-*
-
-# Except specific files
-!index.html
-!script.js
-!style.css
